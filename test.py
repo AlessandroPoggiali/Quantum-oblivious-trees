@@ -210,7 +210,7 @@ def main(args):
     X_train, X_temp, Y_train, Y_temp = train_test_split(X, Y, test_size=0.3, random_state=42)
     X_val, X_test, Y_val, Y_test = train_test_split(X_temp, Y_temp, test_size=0.5, random_state=42)
 
-    X_train, X_val, X_test, Y_train, Y_val, Y_test = load_data("car")
+    X_train, X_val, X_test, Y_train, Y_val, Y_test = load_data("iris")
     print("Dimensions:", X_train.shape, Y_train.shape)
 
     num_classes = len(np.unique(np.concatenate([Y_train, Y_val, Y_test])))
@@ -241,9 +241,10 @@ def main(args):
 
     theta, thresholds, mu_b, history = model.train(X_train, Y_train, X_val=X_val, Y_val=Y_val, save_every=args.save_every, ckpt_path=args.ckpt)
 
-    model.save_checkpoint(args.ckpt.rstrip('.pt')+'_final.pt', extras={'final': True})
+    if args.ckpt is not None:
+        model.save_checkpoint(args.ckpt.rstrip('.pt')+'_final.pt', extras={'final': True})
     plot_history(history, 'train_val_loss.png', 'train_val_accuracy.png')
-    print("\\nTraining complete.")
+    print("\nTraining complete.")
     if theta is not None:
         print("Final quantum parameters (theta):", theta)
     else:
