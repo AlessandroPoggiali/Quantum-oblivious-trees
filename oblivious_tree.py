@@ -272,9 +272,10 @@ class ObliviousTree:
                     val_acc = (y_pred_val == Y_val_t).float().mean().item()
                     history['val_bce'].append(val_ce)
                     history['val_acc'].append(val_acc)
-                    print(f"Epoch {epoch+1}/{self.epochs}  |  Train CE: {train_ce:.6f}  |  Train Acc: {train_acc:.4f}  |  Val CE: {val_ce:.6f}  |  Val Acc: {val_acc:.4f}")
+                    #print(f"Epoch {epoch+1}/{self.epochs}  |  Train CE: {train_ce:.6f}  |  Train Acc: {train_acc:.4f}  |  Val CE: {val_ce:.6f}  |  Val Acc: {val_acc:.4f}")
                 else:
-                    print(f"Epoch {epoch+1}/{self.epochs}  |  Train CE: {train_ce:.6f}  |  Train Acc: {train_acc:.4f}")
+                    pass
+                    #print(f"Epoch {epoch+1}/{self.epochs}  |  Train CE: {train_ce:.6f}  |  Train Acc: {train_acc:.4f}")
 
             if ckpt_path is not None and (epoch+1) % save_every == 0:
                 ckpt_file = f"{ckpt_path.rstrip('.pt')}_epoch{epoch+1}.pt"
