@@ -1,3 +1,4 @@
+# adapted from https://github.com/wOOL/DNDT
 import numpy as np
 import torch
 from functools import reduce
