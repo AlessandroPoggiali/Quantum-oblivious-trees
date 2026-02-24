@@ -93,7 +93,8 @@ class ObliviousTree:
                  ansatz: str = 'ry',
                  use_classical: bool = False,
                  classical_hidden_size: int = 32,
-                 classical_hidden_layers: int = 1):
+                 classical_hidden_layers: int = 1,
+                 use_bias: bool = True):
         self.d = d
         self.feature_indices = feature_indices
         self.device = device
@@ -109,7 +110,7 @@ class ObliviousTree:
         self.ansatz = ansatz
         self.use_classical = use_classical
         if use_classical:
-            self.threshold_module = ClassicalThresholds(d=d, hidden_layers=classical_hidden_layers, hidden_size=classical_hidden_size).to(device)
+            self.threshold_module = ClassicalThresholds(d=d, hidden_layers=classical_hidden_layers, hidden_size=classical_hidden_size, use_bias=use_bias).to(device)
         else:
             self.threshold_module = QuantumThresholds(d=d, reps=q_reps, dev_name=q_dev, shots=q_shots, ansatz=ansatz).to(device)
         self.optimizer = optim.Adam(self.threshold_module.parameters(), lr=self.lr)

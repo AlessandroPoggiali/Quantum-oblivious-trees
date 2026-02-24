@@ -211,14 +211,14 @@ if __name__ == "__main__":
     # y = dataset.target
     #X_train, X_temp, Y_train, Y_temp = train_test_split(X, Y, test_size=0.3, random_state=42)
     #X_val, X_test, Y_val, Y_test = train_test_split(X_temp, Y_temp, test_size=0.5, random_state=42)
-    X_train, X_val, X_test, Y_train, Y_val, Y_test = load_data("glass")
+    X_train, X_val, X_test, Y_train, Y_val, Y_test = load_data("car")
     print("Dimensions:", X_train.shape, Y_train.shape)
     results = train_dndt_minibatch(
         X_train, X_val, X_test, Y_train, Y_val, Y_test,
         num_cut_per_dim=1,
-        batch_size=32,
+        batch_size=100,
         epochs=500,
-        lr=0.01,
+        lr=0.001,
         temperature=0.1
     )
 
