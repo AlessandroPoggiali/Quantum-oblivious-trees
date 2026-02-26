@@ -3,7 +3,7 @@ import numpy as np
 import torch
 from functools import reduce
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.datasets import load_iris, load_wine
 from torch.utils.data import TensorDataset, DataLoader
 import matplotlib.pyplot as plt
@@ -211,12 +211,16 @@ if __name__ == "__main__":
     # y = dataset.target
     #X_train, X_temp, Y_train, Y_temp = train_test_split(X, Y, test_size=0.3, random_state=42)
     #X_val, X_test, Y_val, Y_test = train_test_split(X_temp, Y_temp, test_size=0.5, random_state=42)
-    X_train, X_val, X_test, Y_train, Y_val, Y_test = load_data("car")
+    X_train, X_val, X_test, Y_train, Y_val, Y_test = load_data("breast")
+    scaler = MinMaxScaler(feature_range=(0, 1))
+    X_train = scaler.fit_transform(X_train)
+    X_val = scaler.transform(X_val)
+    X_test = scaler.transform(X_test)
     print("Dimensions:", X_train.shape, Y_train.shape)
     results = train_dndt_minibatch(
         X_train, X_val, X_test, Y_train, Y_val, Y_test,
         num_cut_per_dim=1,
-        batch_size=100,
+        batch_size=20,
         epochs=500,
         lr=0.001,
         temperature=0.1

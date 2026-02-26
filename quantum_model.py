@@ -49,5 +49,6 @@ class QuantumThresholds(nn.Module):
         exps = self._qnode(self.theta) 
         exps = torch.stack(exps) if isinstance(exps, (list, tuple)) else exps
         exps = exps.float()
-        thresholds = 0.5 * (exps + 1.0)
+        #thresholds = 0.5 * (exps + 1.0)
+        thresholds = torch.sigmoid(exps)
         return thresholds

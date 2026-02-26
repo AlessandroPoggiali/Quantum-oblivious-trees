@@ -227,9 +227,9 @@ def plot_decision_boundary(model, X_test, Y_test, mu, thresholds, alpha, device=
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--d', type=int, default=4, help='Tree depth')
-    parser.add_argument('--epochs', type=int, default=30, help='Number of training epochs')
-    parser.add_argument('--batch-size', type=int, default=32, help='Batch size')
-    parser.add_argument('--lr', type=float, default=1e-4, help='Learning rate')
+    parser.add_argument('--epochs', type=int, default=100, help='Number of training epochs')
+    parser.add_argument('--batch-size', type=int, default=100, help='Batch size')
+    parser.add_argument('--lr', type=float, default=1e-2, help='Learning rate')
     parser.add_argument('--use-bias', type=str, default='y', choices=['n','y'], help='Use bias in classical thresholds')
     parser.add_argument('--alpha-init', type=float, default=1.0, help='Initial alpha')
     parser.add_argument('--alpha-final', type=float, default=20.0, help='Final alpha')
@@ -307,6 +307,7 @@ def train_and_evaluate(model: ObliviousTree,
         save_every=100,  # Don't save checkpoints
         ckpt_path=None
     )
+    #print(f"Final threshold: {thresholds}")
     
     # Evaluate on test set
     X_test_t = torch.tensor(X_test, dtype=torch.float32, device=device)
@@ -344,6 +345,13 @@ def test_dataset(dataset_name: str, args, results_list: list, run_results_list: 
     
     try:
         X_train, X_val, X_test, Y_train, Y_val, Y_test = load_data(dataset_name)
+
+        # Map data to [0, 1] range
+        scaler = MinMaxScaler(feature_range=(0, 1))
+        X_train = scaler.fit_transform(X_train)
+        X_val = scaler.transform(X_val)
+        X_test = scaler.transform(X_test)
+        
     except Exception as e:
         print(f"Failed to load {dataset_name}: {e}")
         return False
@@ -405,6 +413,7 @@ def test_dataset(dataset_name: str, args, results_list: list, run_results_list: 
                 classical_hidden_size=0,
                 use_bias=args.use_bias=='y'
             )
+            
             classical_metrics, classical_history = train_and_evaluate(
                 classical_model, X_train, Y_train, X_val, Y_val, X_test, Y_test, device
             )
@@ -659,5 +668,13 @@ def main(args):
 
 
 if __name__ == '__main__':
+    '''
+    dataset_name = 'banknote'
+    X_train, X_val, X_test, Y_train, Y_val, Y_test = load_data(dataset_name)
+    print(f"Loaded dataset '{dataset_name}' with shapes: X_train={X_train.shape}, Y_train={Y_train.shape}, X_val={X_val.shape}, Y_val={Y_val.shape}, X_test={X_test.shape}, Y_test={Y_test.shape}")
+    exit()
+    '''
+    
+    
     args = parse_args()
     main(args)
