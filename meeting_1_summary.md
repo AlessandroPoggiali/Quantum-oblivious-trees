@@ -50,9 +50,9 @@ This is the simplest possible baseline: `d` free parameters, no network overhead
 
 ## Experimental Plan
 
-### Study 1: Simple Datasets -- FFNN (0 layers) vs Sampler
+### Study 1: FFNN (0 layers) vs Sampler
 
-For the simpler datasets already benchmarked (e.g., iris, wine, banknote, breast, heart, etc.), compare the two approaches along the following axes:
+Run **all 22 datasets** for both approaches. Compare along the following axes:
 
 | Axis | What to Measure |
 |------|-----------------|
@@ -61,9 +61,9 @@ For the simpler datasets already benchmarked (e.g., iris, wine, banknote, breast
 | **Convergence speed** | Training and validation loss curves over epochs. How quickly does each approach find good thresholds? |
 | **Final accuracy** | Test accuracy at convergence for both methods. |
 
-### Study 2: Complex Datasets -- FFNN with Hidden Layers
+### Study 2: FFNN with Hidden Layers
 
-For more complex datasets (e.g., fico, drybean, avila, vehicle, etc.), investigate whether a deeper FFNN produces better thresholds:
+Run **all 22 datasets** with deeper FFNN configurations to investigate whether a richer parameterization produces better thresholds:
 
 | Configuration | What to Vary |
 |---------------|--------------|
@@ -76,7 +76,7 @@ Both approaches must be studied under varying:
 
 | Hyperparameter | Values to Explore |
 |----------------|-------------------|
-| **Optimizer** | Adam, SGD, AdamW, RMSprop (at minimum) |
+| **Optimizer** | Adam, SGD |
 | **Learning rate** | Grid search over e.g., {0.001, 0.005, 0.01, 0.05, 0.1} |
 
 ### Study 4: Decision Tree Baseline
@@ -104,7 +104,7 @@ Compare both threshold generation approaches against a **standard (sklearn) deci
 2. **How does expressiveness scale with network size?** Does adding hidden layers/neurons to the FFNN improve threshold quality, or does it overfit?
 3. **Convergence dynamics**: which approach converges faster? Is there a tradeoff between convergence speed and final accuracy?
 4. **Optimizer sensitivity**: are the two approaches differently sensitive to the choice of optimizer and learning rate?
-5. **When does depth help?** On which types of datasets (simple vs complex, few features vs many) does a deeper FFNN provide benefit?
+5. **When does depth help?** On which datasets (few features vs many, few classes vs many, small vs large) does a deeper FFNN provide benefit?
 
 ---
 
