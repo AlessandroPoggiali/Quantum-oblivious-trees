@@ -94,7 +94,9 @@ class ObliviousTree:
                  use_classical: bool = False,
                  classical_hidden_size: int = 32,
                  classical_hidden_layers: int = 1,
-                 use_bias: bool = True):
+                 use_bias: bool = True,
+                 threshold_type: Optional[str] = None,
+                 optimizer_type: str = 'adam'):
         self.d = d
         self.feature_indices = feature_indices
         self.device = device
@@ -109,11 +111,38 @@ class ObliviousTree:
         self.num_classes = num_classes
         self.ansatz = ansatz
         self.use_classical = use_classical
-        if use_classical:
-            self.threshold_module = ClassicalThresholds(d=d, hidden_layers=classical_hidden_layers, hidden_size=classical_hidden_size, use_bias=use_bias).to(device)
+        self.threshold_type = threshold_type
+        self.optimizer_type = optimizer_type
+
+        if threshold_type is not None:
+            if threshold_type == 'sampler':
+                from sampler_model import SamplerThresholds
+                self.threshold_module = SamplerThresholds(d=d).to(device)
+            elif threshold_type == 'classical':
+                self.threshold_module = ClassicalThresholds(
+                    d=d, hidden_layers=classical_hidden_layers,
+                    hidden_size=classical_hidden_size, use_bias=use_bias
+                ).to(device)
+            elif threshold_type == 'quantum':
+                self.threshold_module = QuantumThresholds(
+                    d=d, reps=q_reps, dev_name=q_dev, shots=q_shots, ansatz=ansatz
+                ).to(device)
+            else:
+                raise ValueError(f"Unknown threshold_type: {threshold_type}")
+        elif use_classical:
+            self.threshold_module = ClassicalThresholds(
+                d=d, hidden_layers=classical_hidden_layers,
+                hidden_size=classical_hidden_size, use_bias=use_bias
+            ).to(device)
         else:
-            self.threshold_module = QuantumThresholds(d=d, reps=q_reps, dev_name=q_dev, shots=q_shots, ansatz=ansatz).to(device)
-        self.optimizer = optim.Adam(self.threshold_module.parameters(), lr=self.lr)
+            self.threshold_module = QuantumThresholds(
+                d=d, reps=q_reps, dev_name=q_dev, shots=q_shots, ansatz=ansatz
+            ).to(device)
+
+        if optimizer_type == 'sgd':
+            self.optimizer = optim.SGD(self.threshold_module.parameters(), lr=self.lr)
+        else:
+            self.optimizer = optim.Adam(self.threshold_module.parameters(), lr=self.lr)
         self.bits = bits_matrix(self.d, device=device)
         self.L = 2 ** d
         self.S_b = torch.zeros(self.L, self.num_classes, device=device, dtype=torch.float32) + 1e-6
@@ -155,7 +184,14 @@ class ObliviousTree:
         return yhat, pred_class, P
 
     def save_checkpoint(self, path: str, extras: Optional[Dict[str, Any]] = None):
-        if self.use_classical:
+        if self.threshold_type == 'sampler':
+            state = {
+                'raw_thresholds': self.threshold_module.raw_thresholds.detach().cpu(),
+                'S_b': self.S_b.detach().cpu(),
+                'C_b': self.C_b.detach().cpu(),
+                'optimizer': self.optimizer.state_dict()
+            }
+        elif self.use_classical or self.threshold_type == 'classical':
             state = {
                 'net_state': self.threshold_module.net.state_dict(),
                 'S_b': self.S_b.detach().cpu(),
@@ -283,8 +319,10 @@ class ObliviousTree:
                 self.save_checkpoint(ckpt_file, extras={'epoch': epoch+1})
                 print(f"Saved checkpoint: {ckpt_file}")
 
-        if self.use_classical:
-            final_theta = None  # No quantum parameters for classical
+        if self.threshold_type == 'sampler':
+            final_theta = self.threshold_module.raw_thresholds.detach().cpu().numpy()
+        elif self.use_classical or self.threshold_type == 'classical':
+            final_theta = None
         else:
             final_theta = self.threshold_module.theta.detach().cpu().numpy()
         final_thresholds = self.threshold_module().detach().cpu().numpy()
