@@ -48,7 +48,7 @@ def run_approach(approach_name, dataset_name, actual_d, feature_indices, num_cla
         if approach_name == 'ffnn_0layer_bias':
             model = ObliviousTree(
                 d=actual_d, feature_indices=feature_indices, num_classes=num_classes,
-                threshold_type='classical', classical_hidden_layers=0,
+                device=device, threshold_type='classical', classical_hidden_layers=0,
                 classical_hidden_size=0, use_bias=True,
                 epochs=args.epochs, batch_size=args.batch_size, lr=args.lr,
                 alpha_init=args.alpha_init, alpha_final=args.alpha_final,
@@ -56,7 +56,7 @@ def run_approach(approach_name, dataset_name, actual_d, feature_indices, num_cla
         elif approach_name == 'ffnn_0layer_nobias':
             model = ObliviousTree(
                 d=actual_d, feature_indices=feature_indices, num_classes=num_classes,
-                threshold_type='classical', classical_hidden_layers=0,
+                device=device, threshold_type='classical', classical_hidden_layers=0,
                 classical_hidden_size=0, use_bias=False,
                 epochs=args.epochs, batch_size=args.batch_size, lr=args.lr,
                 alpha_init=args.alpha_init, alpha_final=args.alpha_final,
@@ -64,7 +64,7 @@ def run_approach(approach_name, dataset_name, actual_d, feature_indices, num_cla
         elif approach_name == 'sampler':
             model = ObliviousTree(
                 d=actual_d, feature_indices=feature_indices, num_classes=num_classes,
-                threshold_type='sampler',
+                device=device, threshold_type='sampler',
                 epochs=args.epochs, batch_size=args.batch_size, lr=args.lr,
                 alpha_init=args.alpha_init, alpha_final=args.alpha_final,
             )

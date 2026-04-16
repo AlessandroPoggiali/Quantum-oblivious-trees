@@ -62,6 +62,7 @@ def run_hidden_size(h_size, dataset_name, actual_d, feature_indices, num_classes
             d=actual_d,
             feature_indices=feature_indices,
             num_classes=num_classes,
+            device=device,
             threshold_type='classical',
             classical_hidden_layers=1,
             classical_hidden_size=h_size,
