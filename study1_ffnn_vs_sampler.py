@@ -16,6 +16,7 @@ from experiment_utils import (
     save_results_csv,
     plot_convergence_compare,
     wandb_log_run,
+    log_error,
 )
 
 
@@ -102,89 +103,94 @@ def main():
     print(f"Datasets: {len(datasets_to_test)}, Depths: {depth_grid}, Runs: {args.num_runs}")
 
     for dataset_name in datasets_to_test:
-        data = load_and_prepare_dataset(dataset_name)
-        if data is None:
-            print(f"  Skipping {dataset_name}: load failed")
-            continue
-        X_train, X_val, X_test, Y_train, Y_val, Y_test, num_classes, num_features = data
-        actual_depths = compute_actual_depths(num_features, depth_grid)
+        try:
+            data = load_and_prepare_dataset(dataset_name)
+            if data is None:
+                print(f"  Skipping {dataset_name}: load failed")
+                continue
+            X_train, X_val, X_test, Y_train, Y_val, Y_test, num_classes, num_features = data
+            actual_depths = compute_actual_depths(num_features, depth_grid)
 
-        for actual_d in actual_depths:
-            print(f"\n  {dataset_name} (d={actual_d}, features={num_features}, classes={num_classes})")
+            for actual_d in actual_depths:
+                print(f"\n  {dataset_name} (d={actual_d}, features={num_features}, classes={num_classes})")
 
-            all_histories = {}
-            approach_results = {}
+                all_histories = {}
+                approach_results = {}
 
-            for approach in approaches:
-                feature_indices = np.random.choice(
-                    num_features, size=actual_d, replace=False
-                ).tolist()
+                for approach in approaches:
+                    feature_indices = np.random.choice(
+                        num_features, size=actual_d, replace=False
+                    ).tolist()
 
-                run_metrics, histories = run_approach(
-                    approach, dataset_name, actual_d, feature_indices,
-                    num_classes, args, device
-                )
-                if run_metrics is None:
-                    continue
+                    run_metrics, histories = run_approach(
+                        approach, dataset_name, actual_d, feature_indices,
+                        num_classes, args, device
+                    )
+                    if run_metrics is None:
+                        continue
 
-                all_histories[approach] = histories
-                mean_test_acc = np.mean(run_metrics['test_acc'])
-                std_test_acc = np.std(run_metrics['test_acc'])
-                approach_results[approach] = mean_test_acc
+                    all_histories[approach] = histories
+                    mean_test_acc = np.mean(run_metrics['test_acc'])
+                    std_test_acc = np.std(run_metrics['test_acc'])
+                    approach_results[approach] = mean_test_acc
 
-                num_params = actual_d  # sampler
-                if 'ffnn' in approach:
-                    num_params = actual_d * 2 if 'bias' in approach else actual_d
+                    num_params = actual_d  # sampler
+                    if 'ffnn' in approach:
+                        num_params = actual_d * 2 if 'bias' in approach else actual_d
 
-                results.append({
-                    'timestamp': datetime.now().isoformat(),
-                    'dataset': dataset_name,
-                    'depth': actual_d,
-                    'num_features': num_features,
-                    'num_classes': num_classes,
-                    'num_samples_train': X_train.shape[0],
-                    'approach': approach,
-                    'test_acc_mean': np.mean(run_metrics['test_acc']),
-                    'test_acc_std': np.std(run_metrics['test_acc']),
-                    'test_ce_mean': np.mean(run_metrics['test_ce']),
-                    'test_ce_std': np.std(run_metrics['test_ce']),
-                    'val_acc_mean': np.mean(run_metrics['val_acc']),
-                    'val_acc_std': np.std(run_metrics['val_acc']),
-                    'num_params': num_params,
-                })
-
-                for run_idx, m_list in enumerate(zip(*[run_metrics[k] for k in ['test_acc', 'test_ce', 'val_acc', 'val_ce']])):
-                    seed = 42 * (run_idx + 1) + 1234
-                    run_results.append({
+                    results.append({
+                        'timestamp': datetime.now().isoformat(),
                         'dataset': dataset_name,
                         'depth': actual_d,
+                        'num_features': num_features,
+                        'num_classes': num_classes,
+                        'num_samples_train': X_train.shape[0],
                         'approach': approach,
-                        'run_idx': run_idx + 1,
-                        'seed': seed,
-                        'test_acc': m_list[0],
-                        'test_ce': m_list[1],
-                        'val_acc': m_list[2],
-                        'val_ce': m_list[3],
+                        'test_acc_mean': np.mean(run_metrics['test_acc']),
+                        'test_acc_std': np.std(run_metrics['test_acc']),
+                        'test_ce_mean': np.mean(run_metrics['test_ce']),
+                        'test_ce_std': np.std(run_metrics['test_ce']),
+                        'val_acc_mean': np.mean(run_metrics['val_acc']),
+                        'val_acc_std': np.std(run_metrics['val_acc']),
+                        'num_params': num_params,
                     })
-                    if args.wandb:
-                        wandb_log_run(
-                            study_name='study1_ffnn_vs_sampler',
-                            config={
-                                'dataset': dataset_name, 'depth': actual_d,
-                                'approach': approach, 'seed': seed,
-                                'epochs': args.epochs, 'batch_size': args.batch_size,
-                                'lr': args.lr, 'num_params': num_params,
-                            },
-                            metrics={'test_acc': m_list[0], 'test_ce': m_list[1],
-                                     'val_acc': m_list[2], 'val_ce': m_list[3]},
-                            history=histories[run_idx],
-                        )
 
-                print(f"    {approach}: acc={mean_test_acc:.4f} +/- {std_test_acc:.4f}")
+                    for run_idx, m_list in enumerate(zip(*[run_metrics[k] for k in ['test_acc', 'test_ce', 'val_acc', 'val_ce']])):
+                        seed = 42 * (run_idx + 1) + 1234
+                        run_results.append({
+                            'dataset': dataset_name,
+                            'depth': actual_d,
+                            'approach': approach,
+                            'run_idx': run_idx + 1,
+                            'seed': seed,
+                            'test_acc': m_list[0],
+                            'test_ce': m_list[1],
+                            'val_acc': m_list[2],
+                            'val_ce': m_list[3],
+                        })
+                        if args.wandb:
+                            wandb_log_run(
+                                study_name='study1_ffnn_vs_sampler',
+                                config={
+                                    'dataset': dataset_name, 'depth': actual_d,
+                                    'approach': approach, 'seed': seed,
+                                    'epochs': args.epochs, 'batch_size': args.batch_size,
+                                    'lr': args.lr, 'num_params': num_params,
+                                },
+                                metrics={'test_acc': m_list[0], 'test_ce': m_list[1],
+                                         'val_acc': m_list[2], 'val_ce': m_list[3]},
+                                history=histories[run_idx],
+                            )
 
-            # Plot convergence
-            plot_dir = os.path.join(args.output_dir, 'plots', dataset_name)
-            plot_convergence_compare(all_histories, plot_dir, dataset_name, actual_d)
+                    print(f"    {approach}: acc={mean_test_acc:.4f} +/- {std_test_acc:.4f}")
+
+                # Plot convergence
+                plot_dir = os.path.join(args.output_dir, 'plots', dataset_name)
+                plot_convergence_compare(all_histories, plot_dir, dataset_name, actual_d)
+        except Exception as e:
+            print(f"  ERROR on {dataset_name}: {e}")
+            log_error('study1_ffnn_vs_sampler', dataset_name, e)
+            continue
 
     # Save results
     os.makedirs(args.output_dir, exist_ok=True)

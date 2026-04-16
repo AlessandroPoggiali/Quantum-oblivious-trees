@@ -1,5 +1,7 @@
 import os
 import csv
+import traceback
+from datetime import datetime
 from typing import Optional, Tuple, Dict, List, Any
 
 import numpy as np
@@ -10,6 +12,17 @@ from sklearn.preprocessing import MinMaxScaler
 
 from gentree_utils import load_data, DATASETS
 from oblivious_tree import ObliviousTree
+
+
+def log_error(study_name: str, dataset_name: str, error: Exception,
+              log_path: str = "errors.log"):
+    """Append an error entry to the shared errors.log file."""
+    timestamp = datetime.now().isoformat()
+    tb = traceback.format_exception(type(error), error, error.__traceback__)
+    with open(log_path, "a") as f:
+        f.write(f"[{timestamp}] {study_name} | dataset={dataset_name}\n")
+        f.write("".join(tb))
+        f.write("\n")
 
 
 def set_random_seed(seed: int):

@@ -13,6 +13,7 @@ from experiment_utils import (
     compute_actual_depths,
     save_results_csv,
     wandb_log_run,
+    log_error,
 )
 
 
@@ -108,80 +109,85 @@ def main():
     print(f"Datasets: {len(datasets_to_test)}, Depths: {depth_grid}, Runs: {args.num_runs}")
 
     for dataset_name in datasets_to_test:
-        data = load_and_prepare_dataset(dataset_name)
-        if data is None:
-            print(f"  Skipping {dataset_name}: load failed")
-            continue
-        X_train, X_val, X_test, Y_train, Y_val, Y_test, num_classes, num_features = data
-        actual_depths = compute_actual_depths(num_features, depth_grid)
-
-        for actual_d in actual_depths:
-            print(f"\n  {dataset_name} (d={actual_d}, features={num_features}, classes={num_classes})")
-
-            # Sample feature indices once per (dataset, depth) — same as OBT studies
-            feature_indices = np.random.choice(
-                num_features, size=actual_d, replace=False
-            ).tolist()
-
-            agg, per_run = run_dt(
-                dataset_name, actual_d, feature_indices, num_classes, args.num_runs
-            )
-            if agg is None:
-                print(f"    FAILED")
+        try:
+            data = load_and_prepare_dataset(dataset_name)
+            if data is None:
+                print(f"  Skipping {dataset_name}: load failed")
                 continue
+            X_train, X_val, X_test, Y_train, Y_val, Y_test, num_classes, num_features = data
+            actual_depths = compute_actual_depths(num_features, depth_grid)
 
-            mean_test_acc = np.mean(agg['test_acc'])
-            std_test_acc = np.std(agg['test_acc'])
+            for actual_d in actual_depths:
+                print(f"\n  {dataset_name} (d={actual_d}, features={num_features}, classes={num_classes})")
 
-            results.append({
-                'timestamp': datetime.now().isoformat(),
-                'dataset': dataset_name,
-                'depth': actual_d,
-                'num_features': num_features,
-                'num_classes': num_classes,
-                'num_samples_train': X_train.shape[0],
-                'dt_test_acc_mean': mean_test_acc,
-                'dt_test_acc_std': std_test_acc,
-                'dt_test_ce_mean': np.mean(agg['test_ce']),
-                'dt_test_ce_std': np.std(agg['test_ce']),
-                'dt_val_acc_mean': np.mean(agg['val_acc']),
-                'dt_val_acc_std': np.std(agg['val_acc']),
-            })
+                # Sample feature indices once per (dataset, depth) — same as OBT studies
+                feature_indices = np.random.choice(
+                    num_features, size=actual_d, replace=False
+                ).tolist()
 
-            for run_info in per_run:
-                run_results.append({
+                agg, per_run = run_dt(
+                    dataset_name, actual_d, feature_indices, num_classes, args.num_runs
+                )
+                if agg is None:
+                    print(f"    FAILED")
+                    continue
+
+                mean_test_acc = np.mean(agg['test_acc'])
+                std_test_acc = np.std(agg['test_acc'])
+
+                results.append({
+                    'timestamp': datetime.now().isoformat(),
                     'dataset': dataset_name,
                     'depth': actual_d,
                     'num_features': num_features,
                     'num_classes': num_classes,
                     'num_samples_train': X_train.shape[0],
-                    'run_idx': run_info['run_idx'],
-                    'seed': run_info['seed'],
-                    'test_acc': run_info['test_acc'],
-                    'test_ce': run_info['test_ce'],
-                    'val_acc': run_info['val_acc'],
-                    'val_ce': run_info['val_ce'],
-                    'n_leaves': run_info['n_leaves'],
-                    'tree_depth': run_info['tree_depth'],
+                    'dt_test_acc_mean': mean_test_acc,
+                    'dt_test_acc_std': std_test_acc,
+                    'dt_test_ce_mean': np.mean(agg['test_ce']),
+                    'dt_test_ce_std': np.std(agg['test_ce']),
+                    'dt_val_acc_mean': np.mean(agg['val_acc']),
+                    'dt_val_acc_std': np.std(agg['val_acc']),
                 })
-                if args.wandb:
-                    wandb_log_run(
-                        study_name='study4_dt_baseline',
-                        config={
-                            'dataset': dataset_name, 'depth': actual_d,
-                            'approach': 'decision_tree', 'seed': run_info['seed'],
-                            'n_leaves': run_info['n_leaves'],
-                            'tree_depth': run_info['tree_depth'],
-                        },
-                        metrics={
-                            'test_acc': run_info['test_acc'],
-                            'test_ce': run_info['test_ce'],
-                            'val_acc': run_info['val_acc'],
-                            'val_ce': run_info['val_ce'],
-                        },
-                    )
 
-            print(f"    DT: acc={mean_test_acc:.4f} +/- {std_test_acc:.4f}")
+                for run_info in per_run:
+                    run_results.append({
+                        'dataset': dataset_name,
+                        'depth': actual_d,
+                        'num_features': num_features,
+                        'num_classes': num_classes,
+                        'num_samples_train': X_train.shape[0],
+                        'run_idx': run_info['run_idx'],
+                        'seed': run_info['seed'],
+                        'test_acc': run_info['test_acc'],
+                        'test_ce': run_info['test_ce'],
+                        'val_acc': run_info['val_acc'],
+                        'val_ce': run_info['val_ce'],
+                        'n_leaves': run_info['n_leaves'],
+                        'tree_depth': run_info['tree_depth'],
+                    })
+                    if args.wandb:
+                        wandb_log_run(
+                            study_name='study4_dt_baseline',
+                            config={
+                                'dataset': dataset_name, 'depth': actual_d,
+                                'approach': 'decision_tree', 'seed': run_info['seed'],
+                                'n_leaves': run_info['n_leaves'],
+                                'tree_depth': run_info['tree_depth'],
+                            },
+                            metrics={
+                                'test_acc': run_info['test_acc'],
+                                'test_ce': run_info['test_ce'],
+                                'val_acc': run_info['val_acc'],
+                                'val_ce': run_info['val_ce'],
+                            },
+                        )
+
+                print(f"    DT: acc={mean_test_acc:.4f} +/- {std_test_acc:.4f}")
+        except Exception as e:
+            print(f"  ERROR on {dataset_name}: {e}")
+            log_error('study4_dt_baseline', dataset_name, e)
+            continue
 
     # Save results
     os.makedirs(args.output_dir, exist_ok=True)
