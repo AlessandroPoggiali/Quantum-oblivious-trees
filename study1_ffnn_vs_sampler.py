@@ -15,6 +15,7 @@ from experiment_utils import (
     train_and_evaluate_model,
     save_results_csv,
     plot_convergence_compare,
+    wandb_log_run,
 )
 
 
@@ -30,6 +31,7 @@ def parse_args():
     parser.add_argument('--output-dir', type=str, default='results/study1')
     parser.add_argument('--alpha-init', type=float, default=1.0)
     parser.add_argument('--alpha-final', type=float, default=20.0)
+    parser.add_argument('--wandb', action='store_true', help='Log to Weights & Biases')
     return parser.parse_args()
 
 
@@ -152,17 +154,31 @@ def main():
                 })
 
                 for run_idx, m_list in enumerate(zip(*[run_metrics[k] for k in ['test_acc', 'test_ce', 'val_acc', 'val_ce']])):
+                    seed = 42 * (run_idx + 1) + 1234
                     run_results.append({
                         'dataset': dataset_name,
                         'depth': actual_d,
                         'approach': approach,
                         'run_idx': run_idx + 1,
-                        'seed': 42 * (run_idx + 1) + 1234,
+                        'seed': seed,
                         'test_acc': m_list[0],
                         'test_ce': m_list[1],
                         'val_acc': m_list[2],
                         'val_ce': m_list[3],
                     })
+                    if args.wandb:
+                        wandb_log_run(
+                            study_name='study1_ffnn_vs_sampler',
+                            config={
+                                'dataset': dataset_name, 'depth': actual_d,
+                                'approach': approach, 'seed': seed,
+                                'epochs': args.epochs, 'batch_size': args.batch_size,
+                                'lr': args.lr, 'num_params': num_params,
+                            },
+                            metrics={'test_acc': m_list[0], 'test_ce': m_list[1],
+                                     'val_acc': m_list[2], 'val_ce': m_list[3]},
+                            history=histories[run_idx],
+                        )
 
                 print(f"    {approach}: acc={mean_test_acc:.4f} +/- {std_test_acc:.4f}")
 

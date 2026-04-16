@@ -14,6 +14,7 @@ from experiment_utils import (
     compute_actual_depths,
     train_and_evaluate_model,
     save_results_csv,
+    wandb_log_run,
 )
 
 
@@ -32,6 +33,7 @@ def parse_args():
     parser.add_argument('--output-dir', type=str, default='results/study3')
     parser.add_argument('--alpha-init', type=float, default=1.0)
     parser.add_argument('--alpha-final', type=float, default=20.0)
+    parser.add_argument('--wandb', action='store_true', help='Log to Weights & Biases')
     return parser.parse_args()
 
 
@@ -42,6 +44,7 @@ def run_config(approach_name, opt_name, lr, dataset_name, actual_d, feature_indi
     Returns aggregated run_metrics dict or None on failure.
     """
     run_metrics = defaultdict(list)
+    histories = []
 
     for run_idx in range(args.num_runs):
         seed = 42 * (run_idx + 1) + 1234
@@ -81,16 +84,17 @@ def run_config(approach_name, opt_name, lr, dataset_name, actual_d, feature_indi
 
         data = load_and_prepare_dataset(dataset_name)
         if data is None:
-            return None
+            return None, None
         X_train, X_val, X_test, Y_train, Y_val, Y_test, _, _ = data
 
-        metrics, _ = train_and_evaluate_model(
+        metrics, history = train_and_evaluate_model(
             model, X_train, Y_train, X_val, Y_val, X_test, Y_test, device
         )
         for k, v in metrics.items():
             run_metrics[k].append(v)
+        histories.append(history)
 
-    return run_metrics
+    return run_metrics, histories
 
 
 def main():
@@ -131,7 +135,7 @@ def main():
             for approach in approaches:
                 for opt_name in optimizers:
                     for lr in learning_rates:
-                        run_metrics = run_config(
+                        run_metrics, histories = run_config(
                             approach, opt_name, lr,
                             dataset_name, actual_d, feature_indices,
                             num_classes, args, device
@@ -164,6 +168,7 @@ def main():
                         for run_idx, m_list in enumerate(
                             zip(*[run_metrics[k] for k in ['test_acc', 'test_ce', 'val_acc', 'val_ce']])
                         ):
+                            seed = 42 * (run_idx + 1) + 1234
                             run_results.append({
                                 'dataset': dataset_name,
                                 'depth': actual_d,
@@ -171,12 +176,25 @@ def main():
                                 'optimizer': opt_name,
                                 'learning_rate': lr,
                                 'run_idx': run_idx + 1,
-                                'seed': 42 * (run_idx + 1) + 1234,
+                                'seed': seed,
                                 'test_acc': m_list[0],
                                 'test_ce': m_list[1],
                                 'val_acc': m_list[2],
                                 'val_ce': m_list[3],
                             })
+                            if args.wandb:
+                                wandb_log_run(
+                                    study_name='study3_hp_sensitivity',
+                                    config={
+                                        'dataset': dataset_name, 'depth': actual_d,
+                                        'approach': approach, 'optimizer': opt_name,
+                                        'learning_rate': lr, 'seed': seed,
+                                        'epochs': args.epochs, 'batch_size': args.batch_size,
+                                    },
+                                    metrics={'test_acc': m_list[0], 'test_ce': m_list[1],
+                                             'val_acc': m_list[2], 'val_ce': m_list[3]},
+                                    history=histories[run_idx],
+                                )
 
                         print(f"    {approach}/{opt_name}/lr={lr}: "
                               f"acc={mean_test_acc:.4f} +/- {std_test_acc:.4f}")

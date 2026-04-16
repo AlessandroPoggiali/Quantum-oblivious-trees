@@ -12,6 +12,7 @@ from experiment_utils import (
     load_and_prepare_dataset,
     compute_actual_depths,
     save_results_csv,
+    wandb_log_run,
 )
 
 
@@ -22,6 +23,7 @@ def parse_args():
     parser.add_argument('--num-runs', type=int, default=5)
     parser.add_argument('--datasets', type=str, default='all')
     parser.add_argument('--output-dir', type=str, default='results/study4')
+    parser.add_argument('--wandb', action='store_true', help='Log to Weights & Biases')
     return parser.parse_args()
 
 
@@ -162,6 +164,22 @@ def main():
                     'n_leaves': run_info['n_leaves'],
                     'tree_depth': run_info['tree_depth'],
                 })
+                if args.wandb:
+                    wandb_log_run(
+                        study_name='study4_dt_baseline',
+                        config={
+                            'dataset': dataset_name, 'depth': actual_d,
+                            'approach': 'decision_tree', 'seed': run_info['seed'],
+                            'n_leaves': run_info['n_leaves'],
+                            'tree_depth': run_info['tree_depth'],
+                        },
+                        metrics={
+                            'test_acc': run_info['test_acc'],
+                            'test_ce': run_info['test_ce'],
+                            'val_acc': run_info['val_acc'],
+                            'val_ce': run_info['val_ce'],
+                        },
+                    )
 
             print(f"    DT: acc={mean_test_acc:.4f} +/- {std_test_acc:.4f}")
 

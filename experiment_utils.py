@@ -100,6 +100,35 @@ def summarize_histories(histories):
     return summary
 
 
+def wandb_log_run(
+    study_name: str,
+    config: dict,
+    metrics: dict,
+    history: dict = None,
+    project: str = "oblivious_trees_tests",
+    entity: str = "quantum_kets",
+):
+    """Log a single run (one seed) to Weights & Biases."""
+    import wandb
+    group = f"{config['dataset']}/d{config['depth']}/{config.get('approach', 'dt')}"
+    run = wandb.init(
+        project=project, entity=entity,
+        name=f"{config.get('approach', 'dt')}_seed{config.get('seed', 0)}",
+        group=group, tags=[study_name, config['dataset']],
+        config=config, reinit=True,
+    )
+    if history:
+        for i, epoch in enumerate(history['epoch']):
+            log = {'epoch': epoch, 'train_ce': history['train_bce'][i], 'train_acc': history['train_acc'][i]}
+            if 'val_bce' in history and i < len(history['val_bce']):
+                log['val_ce'] = history['val_bce'][i]
+            if 'val_acc' in history and i < len(history['val_acc']):
+                log['val_acc'] = history['val_acc'][i]
+            run.log(log)
+    run.summary.update(metrics)
+    run.finish()
+
+
 def plot_convergence_compare(histories_dict, out_dir, dataset_name, depth):
     os.makedirs(out_dir, exist_ok=True)
     summaries = {}
