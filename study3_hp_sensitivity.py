@@ -99,7 +99,7 @@ def run_config(approach_name, opt_name, lr, dataset_name, actual_d, feature_indi
 
 def main():
     args = parse_args()
-    device = torch.device('cpu')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     depth_grid = [int(x) for x in args.d_values.split(',')]
     optimizers = [o.strip().lower() for o in args.optimizers.split(',')]
     learning_rates = [float(x) for x in args.learning_rates.split(',')]

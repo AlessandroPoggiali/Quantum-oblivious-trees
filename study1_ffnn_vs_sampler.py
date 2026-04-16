@@ -88,7 +88,7 @@ def run_approach(approach_name, dataset_name, actual_d, feature_indices, num_cla
 
 def main():
     args = parse_args()
-    device = torch.device('cpu')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     depth_grid = [int(x) for x in args.d_values.split(',')]
 
     datasets_to_test = DATASETS if args.datasets == 'all' else \

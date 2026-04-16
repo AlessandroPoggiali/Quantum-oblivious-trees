@@ -30,8 +30,8 @@ class ClassicalThresholds(nn.Module):
                 
 
     def forward(self) -> torch.Tensor:
-        # Dummy input
-        dummy_input = torch.ones(1, 1)
+        # Dummy input on same device as model parameters
+        dummy_input = torch.ones(1, 1, device=next(self.parameters()).device)
         thresholds = self.net(dummy_input).squeeze(0)
         return thresholds
 

@@ -90,7 +90,7 @@ def run_hidden_size(h_size, dataset_name, actual_d, feature_indices, num_classes
 
 def main():
     args = parse_args()
-    device = torch.device('cpu')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     depth_grid = [int(x) for x in args.d_values.split(',')]
     hidden_sizes = [int(x) for x in args.hidden_sizes.split(',')]
 
