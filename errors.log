@@ -1,0 +1,16 @@
+[2026-04-17T10:22:03.661773] study3_hp_sensitivity | dataset=churn
+Traceback (most recent call last):
+  File "/home/berti/Quantum-oblivious-trees/study3_hp_sensitivity.py", line 190, in main
+    wandb_log_run(
+  File "/home/berti/Quantum-oblivious-trees/experiment_utils.py", line 127, in wandb_log_run
+    run = wandb.init(
+  File "/home/berti/anaconda3/envs/obt/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1611, in init
+    get_sentry().reraise(e)
+  File "/home/berti/anaconda3/envs/obt/lib/python3.10/site-packages/wandb/analytics/sentry.py", line 190, in reraise
+    raise exc.with_traceback(tb)
+  File "/home/berti/anaconda3/envs/obt/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1594, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "/home/berti/anaconda3/envs/obt/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1038, in init
+    raise CommError(
+wandb.errors.errors.CommError: Run initialization has timed out after 90.0 sec. Please try increasing the timeout with the `init_timeout` setting: `wandb.init(settings=wandb.Settings(init_timeout=120))`.
+
