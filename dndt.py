@@ -227,4 +227,18 @@ if __name__ == "__main__":
     )
 
     print("Training complete.")
+    
+    # Print learned tree structure
+    print("\n--- Learned Tree Structure ---")
+    cut_points = results["cut_points"]
+    leaf_score = results["leaf_score"]
+    
+    print(f"\nNumber of features: {len(cut_points)}")
+    for feat_idx, cp in enumerate(cut_points):
+        cp_sorted = torch.sort(cp.detach())[0]
+        print(f"Feature {feat_idx}: thresholds = {cp_sorted.cpu().numpy()}")
+    
+    print(f"\nLeaf scores (shape: {leaf_score.shape}):")
+    print(leaf_score.detach().cpu().numpy())
+
 

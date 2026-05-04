@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:50:58.41861+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:50:58.418652+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125058-lwljrkaj/logs/debug-core.log"}
+{"time":"2026-05-04T12:50:58.527736+02:00","level":"INFO","msg":"created new stream","id":"lwljrkaj"}
+{"time":"2026-05-04T12:50:58.527786+02:00","level":"INFO","msg":"stream: started","id":"lwljrkaj"}
+{"time":"2026-05-04T12:50:58.527793+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"lwljrkaj"}}
+{"time":"2026-05-04T12:50:58.527829+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"lwljrkaj"}}
+{"time":"2026-05-04T12:50:58.527821+02:00","level":"INFO","msg":"sender: started","stream_id":"lwljrkaj"}
+{"time":"2026-05-04T12:50:58.904576+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:50:59.406714+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:50:59.407641+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:51:00.013032+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.382030541},{"desc":"uploading config.yaml","runtime_seconds":0.153352916,"progress":"894B/894B"},{"desc":"uploading output.log","runtime_seconds":0.153290792}],"total_operations":3}}
+{"time":"2026-05-04T12:51:01.436862+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:51:02.787798+02:00","level":"INFO","msg":"stream: closing","id":"lwljrkaj"}
+{"time":"2026-05-04T12:51:02.787817+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"lwljrkaj"}}
+{"time":"2026-05-04T12:51:02.787832+02:00","level":"INFO","msg":"sender: closed","stream_id":"lwljrkaj"}
+{"time":"2026-05-04T12:51:02.787827+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"lwljrkaj"}}
+{"time":"2026-05-04T12:51:02.787977+02:00","level":"INFO","msg":"stream: closed","id":"lwljrkaj"}

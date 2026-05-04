@@ -14,3 +14,13 @@ Traceback (most recent call last):
     raise CommError(
 wandb.errors.errors.CommError: Run initialization has timed out after 90.0 sec. Please try increasing the timeout with the `init_timeout` setting: `wandb.init(settings=wandb.Settings(init_timeout=120))`.
 
+[2026-05-04T14:04:49.823616] sampler_leaf_learning | dataset=iris
+Traceback (most recent call last):
+  File "/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/study_sampler_leaf_learning.py", line 153, in main
+    run_metrics, histories = run_sampler_variant(
+                             ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/study_sampler_leaf_learning.py", line 81, in run_sampler_variant
+    model = ObliviousTreeWithLeaf(
+            ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ObliviousTree.__init__() got an unexpected keyword argument 'use_ema'
+

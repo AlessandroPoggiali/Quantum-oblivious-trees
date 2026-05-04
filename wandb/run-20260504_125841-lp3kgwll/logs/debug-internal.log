@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:58:41.244516+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:58:41.244542+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125841-lp3kgwll/logs/debug-core.log"}
+{"time":"2026-05-04T12:58:41.35349+02:00","level":"INFO","msg":"created new stream","id":"lp3kgwll"}
+{"time":"2026-05-04T12:58:41.353536+02:00","level":"INFO","msg":"stream: started","id":"lp3kgwll"}
+{"time":"2026-05-04T12:58:41.353575+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"lp3kgwll"}}
+{"time":"2026-05-04T12:58:41.353602+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"lp3kgwll"}}
+{"time":"2026-05-04T12:58:41.353651+02:00","level":"INFO","msg":"sender: started","stream_id":"lp3kgwll"}
+{"time":"2026-05-04T12:58:41.898168+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:58:42.463957+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:58:42.464698+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:58:42.996631+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.307908541,"progress":"260B/260B"},{"desc":"saving job artifact","runtime_seconds":0.251619959},{"desc":"uploading output.log","runtime_seconds":0.03887575},{"desc":"uploading config.yaml","runtime_seconds":0.038862833,"progress":"898B/898B"}],"total_operations":4}}
+{"time":"2026-05-04T12:58:43.564715+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:58:44.907622+02:00","level":"INFO","msg":"stream: closing","id":"lp3kgwll"}
+{"time":"2026-05-04T12:58:44.907639+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"lp3kgwll"}}
+{"time":"2026-05-04T12:58:44.907654+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"lp3kgwll"}}
+{"time":"2026-05-04T12:58:44.907661+02:00","level":"INFO","msg":"sender: closed","stream_id":"lp3kgwll"}
+{"time":"2026-05-04T12:58:44.908177+02:00","level":"INFO","msg":"stream: closed","id":"lp3kgwll"}

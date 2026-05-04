@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:53:51.324778+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:53:51.324822+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125351-qdh1bv7x/logs/debug-core.log"}
+{"time":"2026-05-04T12:53:51.434716+02:00","level":"INFO","msg":"created new stream","id":"qdh1bv7x"}
+{"time":"2026-05-04T12:53:51.434766+02:00","level":"INFO","msg":"stream: started","id":"qdh1bv7x"}
+{"time":"2026-05-04T12:53:51.434766+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"qdh1bv7x"}}
+{"time":"2026-05-04T12:53:51.434794+02:00","level":"INFO","msg":"sender: started","stream_id":"qdh1bv7x"}
+{"time":"2026-05-04T12:53:51.43481+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"qdh1bv7x"}}
+{"time":"2026-05-04T12:53:51.859239+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:53:52.496369+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:53:52.497355+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:53:52.963372+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.242518666},{"desc":"uploading wandb-summary.json","runtime_seconds":0.241122292,"progress":"280B/280B"},{"desc":"uploading config.yaml","runtime_seconds":0.030659084,"progress":"901B/901B"},{"desc":"uploading output.log","runtime_seconds":0.030597958}],"total_operations":4}}
+{"time":"2026-05-04T12:53:53.756974+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:53:55.070481+02:00","level":"INFO","msg":"stream: closing","id":"qdh1bv7x"}
+{"time":"2026-05-04T12:53:55.070523+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"qdh1bv7x"}}
+{"time":"2026-05-04T12:53:55.070558+02:00","level":"INFO","msg":"sender: closed","stream_id":"qdh1bv7x"}
+{"time":"2026-05-04T12:53:55.07055+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"qdh1bv7x"}}
+{"time":"2026-05-04T12:53:55.071453+02:00","level":"INFO","msg":"stream: closed","id":"qdh1bv7x"}

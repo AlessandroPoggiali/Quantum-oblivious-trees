@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:51:41.343556+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:51:41.343604+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125141-qx93alx5/logs/debug-core.log"}
+{"time":"2026-05-04T12:51:41.457007+02:00","level":"INFO","msg":"created new stream","id":"qx93alx5"}
+{"time":"2026-05-04T12:51:41.457061+02:00","level":"INFO","msg":"stream: started","id":"qx93alx5"}
+{"time":"2026-05-04T12:51:41.457061+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"qx93alx5"}}
+{"time":"2026-05-04T12:51:41.45709+02:00","level":"INFO","msg":"sender: started","stream_id":"qx93alx5"}
+{"time":"2026-05-04T12:51:41.457093+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"qx93alx5"}}
+{"time":"2026-05-04T12:51:41.865599+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:51:42.528428+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:51:42.529353+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:51:42.967451+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.2113545,"progress":"278B/278B"},{"desc":"saving job artifact","runtime_seconds":0.208332625}],"total_operations":2}}
+{"time":"2026-05-04T12:51:43.541096+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:51:44.945404+02:00","level":"INFO","msg":"stream: closing","id":"qx93alx5"}
+{"time":"2026-05-04T12:51:44.945437+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"qx93alx5"}}
+{"time":"2026-05-04T12:51:44.94548+02:00","level":"INFO","msg":"sender: closed","stream_id":"qx93alx5"}
+{"time":"2026-05-04T12:51:44.945471+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"qx93alx5"}}
+{"time":"2026-05-04T12:51:44.945715+02:00","level":"INFO","msg":"stream: closed","id":"qx93alx5"}

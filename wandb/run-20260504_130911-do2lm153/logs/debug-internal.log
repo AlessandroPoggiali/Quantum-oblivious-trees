@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:09:11.737796+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:09:11.737937+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130911-do2lm153/logs/debug-core.log"}
+{"time":"2026-05-04T13:09:11.84808+02:00","level":"INFO","msg":"created new stream","id":"do2lm153"}
+{"time":"2026-05-04T13:09:11.848136+02:00","level":"INFO","msg":"stream: started","id":"do2lm153"}
+{"time":"2026-05-04T13:09:11.848137+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"do2lm153"}}
+{"time":"2026-05-04T13:09:11.848158+02:00","level":"INFO","msg":"sender: started","stream_id":"do2lm153"}
+{"time":"2026-05-04T13:09:11.848175+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"do2lm153"}}
+{"time":"2026-05-04T13:09:12.290587+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:09:12.86299+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:09:12.864008+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:09:13.404441+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.292606417},{"desc":"uploading config.yaml","runtime_seconds":0.064005667,"progress":"897B/897B"},{"desc":"uploading output.log","runtime_seconds":0.063975875}],"total_operations":3}}
+{"time":"2026-05-04T13:09:14.016077+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:09:15.314023+02:00","level":"INFO","msg":"stream: closing","id":"do2lm153"}
+{"time":"2026-05-04T13:09:15.314064+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"do2lm153"}}
+{"time":"2026-05-04T13:09:15.314138+02:00","level":"INFO","msg":"sender: closed","stream_id":"do2lm153"}
+{"time":"2026-05-04T13:09:15.314127+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"do2lm153"}}
+{"time":"2026-05-04T13:09:15.314427+02:00","level":"INFO","msg":"stream: closed","id":"do2lm153"}

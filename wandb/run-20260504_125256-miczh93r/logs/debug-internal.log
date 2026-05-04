@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:52:56.30094+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:52:56.30096+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125256-miczh93r/logs/debug-core.log"}
+{"time":"2026-05-04T12:52:56.40914+02:00","level":"INFO","msg":"created new stream","id":"miczh93r"}
+{"time":"2026-05-04T12:52:56.409186+02:00","level":"INFO","msg":"stream: started","id":"miczh93r"}
+{"time":"2026-05-04T12:52:56.409193+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"miczh93r"}}
+{"time":"2026-05-04T12:52:56.40921+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"miczh93r"}}
+{"time":"2026-05-04T12:52:56.409231+02:00","level":"INFO","msg":"sender: started","stream_id":"miczh93r"}
+{"time":"2026-05-04T12:52:56.920705+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:52:57.611701+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:52:57.612588+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:52:58.022596+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.202838667,"progress":"278B/278B"},{"desc":"saving job artifact","runtime_seconds":0.179991792}],"total_operations":2}}
+{"time":"2026-05-04T12:52:58.629162+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:53:00.045873+02:00","level":"INFO","msg":"stream: closing","id":"miczh93r"}
+{"time":"2026-05-04T12:53:00.045913+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"miczh93r"}}
+{"time":"2026-05-04T12:53:00.045949+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"miczh93r"}}
+{"time":"2026-05-04T12:53:00.046199+02:00","level":"INFO","msg":"sender: closed","stream_id":"miczh93r"}
+{"time":"2026-05-04T12:53:00.046223+02:00","level":"INFO","msg":"stream: closed","id":"miczh93r"}

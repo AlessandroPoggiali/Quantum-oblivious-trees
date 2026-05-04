@@ -1,0 +1,36 @@
+{
+  "os": "macOS-26.3.1-arm64-arm-64bit",
+  "python": "3.12.2",
+  "startedAt": "2026-05-04T10:51:02.798593Z",
+  "args": [
+    "--wandb"
+  ],
+  "program": "/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/study_sampler_leaf_learning.py",
+  "codePath": "study_sampler_leaf_learning.py",
+  "git": {
+    "remote": "git@github.com:AlessandroPoggiali/Quantum-oblivious-trees.git",
+    "commit": "45d70bf336131cbad6b70fdb73a4d61dae64cff5"
+  },
+  "email": "Alessandro.poggiali97@gmail.com",
+  "root": "/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees",
+  "host": "MacBook-Pro-di-Alessandro-2.local",
+  "username": "alessandro",
+  "executable": "/Users/alessandro/miniforge3/envs/pennylane/bin/python",
+  "codePathLocal": "study_sampler_leaf_learning.py",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "494384795648",
+      "used": "388785373184"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 8
+  },
+  "apple": {}
+}

@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:08:32.77567+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:08:32.775732+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130832-br45t3gk/logs/debug-core.log"}
+{"time":"2026-05-04T13:08:32.888036+02:00","level":"INFO","msg":"created new stream","id":"br45t3gk"}
+{"time":"2026-05-04T13:08:32.888086+02:00","level":"INFO","msg":"stream: started","id":"br45t3gk"}
+{"time":"2026-05-04T13:08:32.88808+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"br45t3gk"}}
+{"time":"2026-05-04T13:08:32.888103+02:00","level":"INFO","msg":"sender: started","stream_id":"br45t3gk"}
+{"time":"2026-05-04T13:08:32.888121+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"br45t3gk"}}
+{"time":"2026-05-04T13:08:33.435432+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:08:33.990115+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:08:33.99111+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:08:34.542653+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.239590209},{"desc":"uploading config.yaml","runtime_seconds":0.016204084,"progress":"893B/893B"},{"desc":"uploading output.log","runtime_seconds":0.01618175}],"total_operations":3}}
+{"time":"2026-05-04T13:08:35.51089+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:08:36.925599+02:00","level":"INFO","msg":"stream: closing","id":"br45t3gk"}
+{"time":"2026-05-04T13:08:36.925648+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"br45t3gk"}}
+{"time":"2026-05-04T13:08:36.925689+02:00","level":"INFO","msg":"sender: closed","stream_id":"br45t3gk"}
+{"time":"2026-05-04T13:08:36.925675+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"br45t3gk"}}
+{"time":"2026-05-04T13:08:36.926113+02:00","level":"INFO","msg":"stream: closed","id":"br45t3gk"}

@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:05:14.29569+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:05:14.295734+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130514-fesnq036/logs/debug-core.log"}
+{"time":"2026-05-04T13:05:14.407316+02:00","level":"INFO","msg":"created new stream","id":"fesnq036"}
+{"time":"2026-05-04T13:05:14.407367+02:00","level":"INFO","msg":"stream: started","id":"fesnq036"}
+{"time":"2026-05-04T13:05:14.407367+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"fesnq036"}}
+{"time":"2026-05-04T13:05:14.407394+02:00","level":"INFO","msg":"sender: started","stream_id":"fesnq036"}
+{"time":"2026-05-04T13:05:14.407414+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"fesnq036"}}
+{"time":"2026-05-04T13:05:14.89117+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:05:15.676541+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:05:15.677628+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:05:16.00942+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.120709917,"progress":"279B/279B"},{"desc":"saving job artifact","runtime_seconds":0.098740959}],"total_operations":2}}
+{"time":"2026-05-04T13:05:16.797723+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:05:18.206676+02:00","level":"INFO","msg":"stream: closing","id":"fesnq036"}
+{"time":"2026-05-04T13:05:18.206726+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"fesnq036"}}
+{"time":"2026-05-04T13:05:18.206753+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"fesnq036"}}
+{"time":"2026-05-04T13:05:18.206786+02:00","level":"INFO","msg":"sender: closed","stream_id":"fesnq036"}
+{"time":"2026-05-04T13:05:18.207076+02:00","level":"INFO","msg":"stream: closed","id":"fesnq036"}

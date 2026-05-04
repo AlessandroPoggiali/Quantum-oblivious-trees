@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:03:49.330305+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:03:49.330605+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130349-u8gneljk/logs/debug-core.log"}
+{"time":"2026-05-04T13:03:49.442229+02:00","level":"INFO","msg":"created new stream","id":"u8gneljk"}
+{"time":"2026-05-04T13:03:49.442282+02:00","level":"INFO","msg":"stream: started","id":"u8gneljk"}
+{"time":"2026-05-04T13:03:49.442275+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"u8gneljk"}}
+{"time":"2026-05-04T13:03:49.442296+02:00","level":"INFO","msg":"sender: started","stream_id":"u8gneljk"}
+{"time":"2026-05-04T13:03:49.442327+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"u8gneljk"}}
+{"time":"2026-05-04T13:03:49.931762+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:03:50.527254+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:03:50.528317+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:03:51.033593+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.264129708},{"desc":"uploading output.log","runtime_seconds":0.052897292},{"desc":"uploading config.yaml","runtime_seconds":0.052885458,"progress":"894B/894B"}],"total_operations":3}}
+{"time":"2026-05-04T13:03:51.551198+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:03:52.995611+02:00","level":"INFO","msg":"stream: closing","id":"u8gneljk"}
+{"time":"2026-05-04T13:03:52.995646+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"u8gneljk"}}
+{"time":"2026-05-04T13:03:52.995681+02:00","level":"INFO","msg":"sender: closed","stream_id":"u8gneljk"}
+{"time":"2026-05-04T13:03:52.99568+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"u8gneljk"}}
+{"time":"2026-05-04T13:03:52.995909+02:00","level":"INFO","msg":"stream: closed","id":"u8gneljk"}

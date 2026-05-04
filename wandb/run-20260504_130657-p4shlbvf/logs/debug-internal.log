@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:06:57.632536+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:06:57.63256+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130657-p4shlbvf/logs/debug-core.log"}
+{"time":"2026-05-04T13:06:57.741098+02:00","level":"INFO","msg":"created new stream","id":"p4shlbvf"}
+{"time":"2026-05-04T13:06:57.741146+02:00","level":"INFO","msg":"stream: started","id":"p4shlbvf"}
+{"time":"2026-05-04T13:06:57.741164+02:00","level":"INFO","msg":"sender: started","stream_id":"p4shlbvf"}
+{"time":"2026-05-04T13:06:57.741144+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"p4shlbvf"}}
+{"time":"2026-05-04T13:06:57.741183+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"p4shlbvf"}}
+{"time":"2026-05-04T13:06:58.151624+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:06:58.854268+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:06:58.855272+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:06:59.287949+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.214148459,"progress":"279B/279B"},{"desc":"saving job artifact","runtime_seconds":0.164655667}],"total_operations":2}}
+{"time":"2026-05-04T13:06:59.886172+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:07:01.265115+02:00","level":"INFO","msg":"stream: closing","id":"p4shlbvf"}
+{"time":"2026-05-04T13:07:01.265146+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"p4shlbvf"}}
+{"time":"2026-05-04T13:07:01.265176+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"p4shlbvf"}}
+{"time":"2026-05-04T13:07:01.265187+02:00","level":"INFO","msg":"sender: closed","stream_id":"p4shlbvf"}
+{"time":"2026-05-04T13:07:01.265351+02:00","level":"INFO","msg":"stream: closed","id":"p4shlbvf"}

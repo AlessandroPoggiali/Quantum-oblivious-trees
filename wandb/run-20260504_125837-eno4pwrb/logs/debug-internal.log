@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:58:37.601654+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:58:37.601742+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125837-eno4pwrb/logs/debug-core.log"}
+{"time":"2026-05-04T12:58:37.716224+02:00","level":"INFO","msg":"created new stream","id":"eno4pwrb"}
+{"time":"2026-05-04T12:58:37.716277+02:00","level":"INFO","msg":"stream: started","id":"eno4pwrb"}
+{"time":"2026-05-04T12:58:37.716276+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"eno4pwrb"}}
+{"time":"2026-05-04T12:58:37.716297+02:00","level":"INFO","msg":"sender: started","stream_id":"eno4pwrb"}
+{"time":"2026-05-04T12:58:37.71631+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"eno4pwrb"}}
+{"time":"2026-05-04T12:58:38.208229+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:58:38.803864+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:58:38.804574+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:58:39.365391+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.299305959},{"desc":"uploading output.log","runtime_seconds":0.073861292},{"desc":"uploading config.yaml","runtime_seconds":0.073848208,"progress":"898B/898B"}],"total_operations":3}}
+{"time":"2026-05-04T12:58:39.89737+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:58:41.236179+02:00","level":"INFO","msg":"stream: closing","id":"eno4pwrb"}
+{"time":"2026-05-04T12:58:41.236212+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"eno4pwrb"}}
+{"time":"2026-05-04T12:58:41.236245+02:00","level":"INFO","msg":"sender: closed","stream_id":"eno4pwrb"}
+{"time":"2026-05-04T12:58:41.236246+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"eno4pwrb"}}
+{"time":"2026-05-04T12:58:41.236618+02:00","level":"INFO","msg":"stream: closed","id":"eno4pwrb"}

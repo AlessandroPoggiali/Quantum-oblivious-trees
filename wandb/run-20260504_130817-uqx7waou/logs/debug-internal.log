@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:08:17.613123+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:08:17.613149+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130817-uqx7waou/logs/debug-core.log"}
+{"time":"2026-05-04T13:08:17.720138+02:00","level":"INFO","msg":"created new stream","id":"uqx7waou"}
+{"time":"2026-05-04T13:08:17.72018+02:00","level":"INFO","msg":"stream: started","id":"uqx7waou"}
+{"time":"2026-05-04T13:08:17.720196+02:00","level":"INFO","msg":"sender: started","stream_id":"uqx7waou"}
+{"time":"2026-05-04T13:08:17.720183+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"uqx7waou"}}
+{"time":"2026-05-04T13:08:17.720216+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"uqx7waou"}}
+{"time":"2026-05-04T13:08:18.466976+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:08:19.042196+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:08:19.043286+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:08:19.60097+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.28978525},{"desc":"uploading config.yaml","runtime_seconds":0.090702333,"progress":"893B/893B"},{"desc":"uploading output.log","runtime_seconds":0.090668}],"total_operations":3}}
+{"time":"2026-05-04T13:08:20.041256+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:08:21.431479+02:00","level":"INFO","msg":"stream: closing","id":"uqx7waou"}
+{"time":"2026-05-04T13:08:21.431522+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"uqx7waou"}}
+{"time":"2026-05-04T13:08:21.431559+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"uqx7waou"}}
+{"time":"2026-05-04T13:08:21.43158+02:00","level":"INFO","msg":"sender: closed","stream_id":"uqx7waou"}
+{"time":"2026-05-04T13:08:21.43181+02:00","level":"INFO","msg":"stream: closed","id":"uqx7waou"}

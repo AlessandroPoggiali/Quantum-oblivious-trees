@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:52:07.782749+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:52:07.782772+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125207-s7aior94/logs/debug-core.log"}
+{"time":"2026-05-04T12:52:07.891302+02:00","level":"INFO","msg":"created new stream","id":"s7aior94"}
+{"time":"2026-05-04T12:52:07.891362+02:00","level":"INFO","msg":"stream: started","id":"s7aior94"}
+{"time":"2026-05-04T12:52:07.891352+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"s7aior94"}}
+{"time":"2026-05-04T12:52:07.891376+02:00","level":"INFO","msg":"sender: started","stream_id":"s7aior94"}
+{"time":"2026-05-04T12:52:07.891408+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"s7aior94"}}
+{"time":"2026-05-04T12:52:08.347475+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:52:08.87734+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:52:08.878268+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:52:09.447935+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.34476325},{"desc":"uploading config.yaml","runtime_seconds":0.121345,"progress":"891B/891B"},{"desc":"uploading output.log","runtime_seconds":0.121294583}],"total_operations":3}}
+{"time":"2026-05-04T12:52:09.848864+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:52:11.198931+02:00","level":"INFO","msg":"stream: closing","id":"s7aior94"}
+{"time":"2026-05-04T12:52:11.198978+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"s7aior94"}}
+{"time":"2026-05-04T12:52:11.199014+02:00","level":"INFO","msg":"sender: closed","stream_id":"s7aior94"}
+{"time":"2026-05-04T12:52:11.199+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"s7aior94"}}
+{"time":"2026-05-04T12:52:11.199361+02:00","level":"INFO","msg":"stream: closed","id":"s7aior94"}

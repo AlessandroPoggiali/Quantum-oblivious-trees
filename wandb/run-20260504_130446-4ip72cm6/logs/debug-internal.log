@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:04:46.336505+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:04:46.336537+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130446-4ip72cm6/logs/debug-core.log"}
+{"time":"2026-05-04T13:04:46.448666+02:00","level":"INFO","msg":"created new stream","id":"4ip72cm6"}
+{"time":"2026-05-04T13:04:46.448705+02:00","level":"INFO","msg":"stream: started","id":"4ip72cm6"}
+{"time":"2026-05-04T13:04:46.448704+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"4ip72cm6"}}
+{"time":"2026-05-04T13:04:46.448724+02:00","level":"INFO","msg":"sender: started","stream_id":"4ip72cm6"}
+{"time":"2026-05-04T13:04:46.448748+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"4ip72cm6"}}
+{"time":"2026-05-04T13:04:46.963193+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:04:47.609311+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:04:47.610293+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:04:48.074608+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.195339125,"progress":"289B/289B"},{"desc":"saving job artifact","runtime_seconds":0.19180175}],"total_operations":2}}
+{"time":"2026-05-04T13:04:48.707448+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:04:50.072157+02:00","level":"INFO","msg":"stream: closing","id":"4ip72cm6"}
+{"time":"2026-05-04T13:04:50.072209+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"4ip72cm6"}}
+{"time":"2026-05-04T13:04:50.072248+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"4ip72cm6"}}
+{"time":"2026-05-04T13:04:50.072263+02:00","level":"INFO","msg":"sender: closed","stream_id":"4ip72cm6"}
+{"time":"2026-05-04T13:04:50.072456+02:00","level":"INFO","msg":"stream: closed","id":"4ip72cm6"}

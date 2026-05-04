@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:08:21.448102+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:08:21.448189+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130821-eemj64c4/logs/debug-core.log"}
+{"time":"2026-05-04T13:08:21.56188+02:00","level":"INFO","msg":"created new stream","id":"eemj64c4"}
+{"time":"2026-05-04T13:08:21.561938+02:00","level":"INFO","msg":"stream: started","id":"eemj64c4"}
+{"time":"2026-05-04T13:08:21.561927+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"eemj64c4"}}
+{"time":"2026-05-04T13:08:21.56195+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"eemj64c4"}}
+{"time":"2026-05-04T13:08:21.561975+02:00","level":"INFO","msg":"sender: started","stream_id":"eemj64c4"}
+{"time":"2026-05-04T13:08:22.002766+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:08:22.558265+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:08:22.559377+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:08:23.117301+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.291479375},{"desc":"uploading config.yaml","runtime_seconds":0.061864625,"progress":"893B/893B"},{"desc":"uploading output.log","runtime_seconds":0.061827833}],"total_operations":3}}
+{"time":"2026-05-04T13:08:23.596448+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:08:24.953279+02:00","level":"INFO","msg":"stream: closing","id":"eemj64c4"}
+{"time":"2026-05-04T13:08:24.953323+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"eemj64c4"}}
+{"time":"2026-05-04T13:08:24.953363+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"eemj64c4"}}
+{"time":"2026-05-04T13:08:24.95339+02:00","level":"INFO","msg":"sender: closed","stream_id":"eemj64c4"}
+{"time":"2026-05-04T13:08:24.953618+02:00","level":"INFO","msg":"stream: closed","id":"eemj64c4"}

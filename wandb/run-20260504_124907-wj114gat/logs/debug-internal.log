@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:49:07.282947+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:49:07.282985+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_124907-wj114gat/logs/debug-core.log"}
+{"time":"2026-05-04T12:49:07.39326+02:00","level":"INFO","msg":"created new stream","id":"wj114gat"}
+{"time":"2026-05-04T12:49:07.393334+02:00","level":"INFO","msg":"stream: started","id":"wj114gat"}
+{"time":"2026-05-04T12:49:07.393322+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wj114gat"}}
+{"time":"2026-05-04T12:49:07.393336+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wj114gat"}}
+{"time":"2026-05-04T12:49:07.393384+02:00","level":"INFO","msg":"sender: started","stream_id":"wj114gat"}
+{"time":"2026-05-04T12:49:07.837066+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:49:08.405571+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:49:08.406931+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:49:08.944143+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.268777292},{"desc":"uploading config.yaml","runtime_seconds":0.065029041,"progress":"891B/891B"},{"desc":"uploading output.log","runtime_seconds":0.064979125}],"total_operations":3}}
+{"time":"2026-05-04T12:49:09.499184+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:49:10.841219+02:00","level":"INFO","msg":"stream: closing","id":"wj114gat"}
+{"time":"2026-05-04T12:49:10.841274+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"wj114gat"}}
+{"time":"2026-05-04T12:49:10.841318+02:00","level":"INFO","msg":"sender: closed","stream_id":"wj114gat"}
+{"time":"2026-05-04T12:49:10.841313+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wj114gat"}}
+{"time":"2026-05-04T12:49:10.841627+02:00","level":"INFO","msg":"stream: closed","id":"wj114gat"}

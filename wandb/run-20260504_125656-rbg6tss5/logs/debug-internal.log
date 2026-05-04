@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:56:56.8557+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:56:56.85574+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125656-rbg6tss5/logs/debug-core.log"}
+{"time":"2026-05-04T12:56:56.966672+02:00","level":"INFO","msg":"created new stream","id":"rbg6tss5"}
+{"time":"2026-05-04T12:56:56.966726+02:00","level":"INFO","msg":"stream: started","id":"rbg6tss5"}
+{"time":"2026-05-04T12:56:56.966718+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"rbg6tss5"}}
+{"time":"2026-05-04T12:56:56.966741+02:00","level":"INFO","msg":"sender: started","stream_id":"rbg6tss5"}
+{"time":"2026-05-04T12:56:56.966758+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"rbg6tss5"}}
+{"time":"2026-05-04T12:56:57.471859+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:56:58.04564+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:56:58.04654+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:56:58.57661+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.280104583},{"desc":"uploading config.yaml","runtime_seconds":0.055844333,"progress":"896B/896B"},{"desc":"uploading output.log","runtime_seconds":0.055758542}],"total_operations":3}}
+{"time":"2026-05-04T12:56:58.977792+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:57:00.327933+02:00","level":"INFO","msg":"stream: closing","id":"rbg6tss5"}
+{"time":"2026-05-04T12:57:00.327978+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"rbg6tss5"}}
+{"time":"2026-05-04T12:57:00.328019+02:00","level":"INFO","msg":"sender: closed","stream_id":"rbg6tss5"}
+{"time":"2026-05-04T12:57:00.328015+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"rbg6tss5"}}
+{"time":"2026-05-04T12:57:00.328277+02:00","level":"INFO","msg":"stream: closed","id":"rbg6tss5"}

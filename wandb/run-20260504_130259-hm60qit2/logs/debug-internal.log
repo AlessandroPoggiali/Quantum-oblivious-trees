@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:02:59.50587+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:02:59.505905+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130259-hm60qit2/logs/debug-core.log"}
+{"time":"2026-05-04T13:02:59.618026+02:00","level":"INFO","msg":"created new stream","id":"hm60qit2"}
+{"time":"2026-05-04T13:02:59.618071+02:00","level":"INFO","msg":"stream: started","id":"hm60qit2"}
+{"time":"2026-05-04T13:02:59.618068+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"hm60qit2"}}
+{"time":"2026-05-04T13:02:59.61811+02:00","level":"INFO","msg":"sender: started","stream_id":"hm60qit2"}
+{"time":"2026-05-04T13:02:59.618119+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"hm60qit2"}}
+{"time":"2026-05-04T13:03:00.279339+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:03:01.052098+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:03:01.05307+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:03:01.385335+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.331302458},{"desc":"uploading wandb-summary.json","runtime_seconds":0.108469,"progress":"289B/289B"}],"total_operations":2}}
+{"time":"2026-05-04T13:03:02.261104+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:03:03.642516+02:00","level":"INFO","msg":"stream: closing","id":"hm60qit2"}
+{"time":"2026-05-04T13:03:03.642558+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"hm60qit2"}}
+{"time":"2026-05-04T13:03:03.64259+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"hm60qit2"}}
+{"time":"2026-05-04T13:03:03.642623+02:00","level":"INFO","msg":"sender: closed","stream_id":"hm60qit2"}
+{"time":"2026-05-04T13:03:03.642879+02:00","level":"INFO","msg":"stream: closed","id":"hm60qit2"}

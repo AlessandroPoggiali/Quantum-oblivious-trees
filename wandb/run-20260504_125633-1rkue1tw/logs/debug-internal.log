@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:56:33.22771+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:56:33.22775+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125633-1rkue1tw/logs/debug-core.log"}
+{"time":"2026-05-04T12:56:33.339335+02:00","level":"INFO","msg":"created new stream","id":"1rkue1tw"}
+{"time":"2026-05-04T12:56:33.339407+02:00","level":"INFO","msg":"stream: started","id":"1rkue1tw"}
+{"time":"2026-05-04T12:56:33.339381+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"1rkue1tw"}}
+{"time":"2026-05-04T12:56:33.339413+02:00","level":"INFO","msg":"sender: started","stream_id":"1rkue1tw"}
+{"time":"2026-05-04T12:56:33.33944+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"1rkue1tw"}}
+{"time":"2026-05-04T12:56:33.90419+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:56:34.501155+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:56:34.50159+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:56:35.007098+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.244884},{"desc":"uploading config.yaml","runtime_seconds":0.030351916,"progress":"892B/892B"},{"desc":"uploading output.log","runtime_seconds":0.030306334}],"total_operations":3}}
+{"time":"2026-05-04T12:56:35.993429+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:56:37.320106+02:00","level":"INFO","msg":"stream: closing","id":"1rkue1tw"}
+{"time":"2026-05-04T12:56:37.320153+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"1rkue1tw"}}
+{"time":"2026-05-04T12:56:37.320189+02:00","level":"INFO","msg":"sender: closed","stream_id":"1rkue1tw"}
+{"time":"2026-05-04T12:56:37.320186+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"1rkue1tw"}}
+{"time":"2026-05-04T12:56:37.321146+02:00","level":"INFO","msg":"stream: closed","id":"1rkue1tw"}

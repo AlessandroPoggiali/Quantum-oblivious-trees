@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:50:50.920147+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:50:50.920187+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125050-t8117krk/logs/debug-core.log"}
+{"time":"2026-05-04T12:50:51.030047+02:00","level":"INFO","msg":"created new stream","id":"t8117krk"}
+{"time":"2026-05-04T12:50:51.03011+02:00","level":"INFO","msg":"stream: started","id":"t8117krk"}
+{"time":"2026-05-04T12:50:51.030108+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"t8117krk"}}
+{"time":"2026-05-04T12:50:51.030133+02:00","level":"INFO","msg":"sender: started","stream_id":"t8117krk"}
+{"time":"2026-05-04T12:50:51.030167+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"t8117krk"}}
+{"time":"2026-05-04T12:50:51.565834+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:50:52.196265+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:50:52.197477+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:50:52.662694+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.233310208},{"desc":"uploading wandb-summary.json","runtime_seconds":0.190161084,"progress":"276B/276B"},{"desc":"uploading config.yaml","runtime_seconds":0.020259334,"progress":"894B/894B"},{"desc":"uploading output.log","runtime_seconds":0.020249625}],"total_operations":4}}
+{"time":"2026-05-04T12:50:53.189387+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:50:54.571467+02:00","level":"INFO","msg":"stream: closing","id":"t8117krk"}
+{"time":"2026-05-04T12:50:54.571512+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"t8117krk"}}
+{"time":"2026-05-04T12:50:54.571556+02:00","level":"INFO","msg":"sender: closed","stream_id":"t8117krk"}
+{"time":"2026-05-04T12:50:54.571554+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"t8117krk"}}
+{"time":"2026-05-04T12:50:54.5718+02:00","level":"INFO","msg":"stream: closed","id":"t8117krk"}

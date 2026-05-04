@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:53:08.232748+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:53:08.23279+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125308-4ryvtipl/logs/debug-core.log"}
+{"time":"2026-05-04T12:53:08.344878+02:00","level":"INFO","msg":"created new stream","id":"4ryvtipl"}
+{"time":"2026-05-04T12:53:08.344925+02:00","level":"INFO","msg":"stream: started","id":"4ryvtipl"}
+{"time":"2026-05-04T12:53:08.344922+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"4ryvtipl"}}
+{"time":"2026-05-04T12:53:08.344946+02:00","level":"INFO","msg":"sender: started","stream_id":"4ryvtipl"}
+{"time":"2026-05-04T12:53:08.344977+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"4ryvtipl"}}
+{"time":"2026-05-04T12:53:08.779067+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:53:09.424624+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:53:09.425753+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:53:09.881384+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.225752333},{"desc":"uploading config.yaml","runtime_seconds":0.002195541,"progress":"901B/901B"},{"desc":"uploading output.log","runtime_seconds":0.002152833}],"total_operations":3}}
+{"time":"2026-05-04T12:53:10.561489+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:53:11.930742+02:00","level":"INFO","msg":"stream: closing","id":"4ryvtipl"}
+{"time":"2026-05-04T12:53:11.930778+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"4ryvtipl"}}
+{"time":"2026-05-04T12:53:11.930814+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"4ryvtipl"}}
+{"time":"2026-05-04T12:53:11.93084+02:00","level":"INFO","msg":"sender: closed","stream_id":"4ryvtipl"}
+{"time":"2026-05-04T12:53:11.930992+02:00","level":"INFO","msg":"stream: closed","id":"4ryvtipl"}

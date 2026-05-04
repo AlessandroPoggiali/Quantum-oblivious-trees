@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:49:58.776787+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:49:58.776814+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_124958-n25zsnec/logs/debug-core.log"}
+{"time":"2026-05-04T12:49:58.88509+02:00","level":"INFO","msg":"created new stream","id":"n25zsnec"}
+{"time":"2026-05-04T12:49:58.885137+02:00","level":"INFO","msg":"stream: started","id":"n25zsnec"}
+{"time":"2026-05-04T12:49:58.885152+02:00","level":"INFO","msg":"sender: started","stream_id":"n25zsnec"}
+{"time":"2026-05-04T12:49:58.885159+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"n25zsnec"}}
+{"time":"2026-05-04T12:49:58.885137+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"n25zsnec"}}
+{"time":"2026-05-04T12:49:59.297638+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:49:59.858613+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:49:59.859574+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:50:00.40532+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.269959292},{"desc":"uploading config.yaml","runtime_seconds":0.027714625,"progress":"894B/894B"},{"desc":"uploading output.log","runtime_seconds":0.027705292}],"total_operations":3}}
+{"time":"2026-05-04T12:50:00.953237+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:50:02.48469+02:00","level":"INFO","msg":"stream: closing","id":"n25zsnec"}
+{"time":"2026-05-04T12:50:02.484772+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"n25zsnec"}}
+{"time":"2026-05-04T12:50:02.484817+02:00","level":"INFO","msg":"sender: closed","stream_id":"n25zsnec"}
+{"time":"2026-05-04T12:50:02.484801+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"n25zsnec"}}
+{"time":"2026-05-04T12:50:02.484986+02:00","level":"INFO","msg":"stream: closed","id":"n25zsnec"}

@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:49:27.486735+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:49:27.486769+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_124927-8vpscdai/logs/debug-core.log"}
+{"time":"2026-05-04T12:49:27.595951+02:00","level":"INFO","msg":"created new stream","id":"8vpscdai"}
+{"time":"2026-05-04T12:49:27.595999+02:00","level":"INFO","msg":"stream: started","id":"8vpscdai"}
+{"time":"2026-05-04T12:49:27.595999+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"8vpscdai"}}
+{"time":"2026-05-04T12:49:27.596016+02:00","level":"INFO","msg":"sender: started","stream_id":"8vpscdai"}
+{"time":"2026-05-04T12:49:27.596053+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"8vpscdai"}}
+{"time":"2026-05-04T12:49:28.041871+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:49:28.643571+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:49:28.644706+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:49:29.142302+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.235401625},{"desc":"uploading config.yaml","runtime_seconds":0.015360208,"progress":"895B/895B"},{"desc":"uploading output.log","runtime_seconds":0.015338167}],"total_operations":3}}
+{"time":"2026-05-04T12:49:29.843671+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:49:31.192604+02:00","level":"INFO","msg":"stream: closing","id":"8vpscdai"}
+{"time":"2026-05-04T12:49:31.192624+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"8vpscdai"}}
+{"time":"2026-05-04T12:49:31.192672+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"8vpscdai"}}
+{"time":"2026-05-04T12:49:31.192716+02:00","level":"INFO","msg":"sender: closed","stream_id":"8vpscdai"}
+{"time":"2026-05-04T12:49:31.192839+02:00","level":"INFO","msg":"stream: closed","id":"8vpscdai"}

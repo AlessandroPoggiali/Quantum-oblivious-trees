@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:59:27.612623+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:59:27.612669+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125927-55z65hyl/logs/debug-core.log"}
+{"time":"2026-05-04T12:59:27.72136+02:00","level":"INFO","msg":"created new stream","id":"55z65hyl"}
+{"time":"2026-05-04T12:59:27.721415+02:00","level":"INFO","msg":"stream: started","id":"55z65hyl"}
+{"time":"2026-05-04T12:59:27.721429+02:00","level":"INFO","msg":"sender: started","stream_id":"55z65hyl"}
+{"time":"2026-05-04T12:59:27.721414+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"55z65hyl"}}
+{"time":"2026-05-04T12:59:27.721416+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"55z65hyl"}}
+{"time":"2026-05-04T12:59:28.159516+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:59:28.718469+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:59:28.71923+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:59:29.25386+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.294389708},{"desc":"uploading config.yaml","runtime_seconds":0.079759584,"progress":"897B/897B"},{"desc":"uploading output.log","runtime_seconds":0.079743083}],"total_operations":3}}
+{"time":"2026-05-04T12:59:29.836239+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:59:31.147196+02:00","level":"INFO","msg":"stream: closing","id":"55z65hyl"}
+{"time":"2026-05-04T12:59:31.147214+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"55z65hyl"}}
+{"time":"2026-05-04T12:59:31.147231+02:00","level":"INFO","msg":"sender: closed","stream_id":"55z65hyl"}
+{"time":"2026-05-04T12:59:31.147229+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"55z65hyl"}}
+{"time":"2026-05-04T12:59:31.147326+02:00","level":"INFO","msg":"stream: closed","id":"55z65hyl"}

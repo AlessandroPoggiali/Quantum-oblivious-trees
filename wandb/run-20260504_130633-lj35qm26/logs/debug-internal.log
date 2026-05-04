@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:06:33.586626+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:06:33.586674+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130633-lj35qm26/logs/debug-core.log"}
+{"time":"2026-05-04T13:06:33.699615+02:00","level":"INFO","msg":"created new stream","id":"lj35qm26"}
+{"time":"2026-05-04T13:06:33.699675+02:00","level":"INFO","msg":"stream: started","id":"lj35qm26"}
+{"time":"2026-05-04T13:06:33.699681+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"lj35qm26"}}
+{"time":"2026-05-04T13:06:33.699673+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"lj35qm26"}}
+{"time":"2026-05-04T13:06:33.699718+02:00","level":"INFO","msg":"sender: started","stream_id":"lj35qm26"}
+{"time":"2026-05-04T13:06:34.406087+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:06:34.944206+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:06:34.945176+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:06:35.515897+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.323430417},{"desc":"uploading config.yaml","runtime_seconds":0.115962417,"progress":"895B/895B"},{"desc":"uploading output.log","runtime_seconds":0.115924292}],"total_operations":3}}
+{"time":"2026-05-04T13:06:36.427723+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:06:37.809327+02:00","level":"INFO","msg":"stream: closing","id":"lj35qm26"}
+{"time":"2026-05-04T13:06:37.809368+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"lj35qm26"}}
+{"time":"2026-05-04T13:06:37.809407+02:00","level":"INFO","msg":"sender: closed","stream_id":"lj35qm26"}
+{"time":"2026-05-04T13:06:37.809399+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"lj35qm26"}}
+{"time":"2026-05-04T13:06:37.809807+02:00","level":"INFO","msg":"stream: closed","id":"lj35qm26"}

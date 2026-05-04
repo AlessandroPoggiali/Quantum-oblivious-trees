@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:02:32.222643+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:02:32.222669+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130232-uui2uto9/logs/debug-core.log"}
+{"time":"2026-05-04T13:02:32.33076+02:00","level":"INFO","msg":"created new stream","id":"uui2uto9"}
+{"time":"2026-05-04T13:02:32.330829+02:00","level":"INFO","msg":"stream: started","id":"uui2uto9"}
+{"time":"2026-05-04T13:02:32.330843+02:00","level":"INFO","msg":"sender: started","stream_id":"uui2uto9"}
+{"time":"2026-05-04T13:02:32.330835+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"uui2uto9"}}
+{"time":"2026-05-04T13:02:32.330838+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"uui2uto9"}}
+{"time":"2026-05-04T13:02:32.77057+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:02:33.395765+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:02:33.39735+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:02:33.867071+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.248136916,"progress":"278B/278B"},{"desc":"saving job artifact","runtime_seconds":0.192839708}],"total_operations":2}}
+{"time":"2026-05-04T13:02:34.612831+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:02:35.95716+02:00","level":"INFO","msg":"stream: closing","id":"uui2uto9"}
+{"time":"2026-05-04T13:02:35.957175+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"uui2uto9"}}
+{"time":"2026-05-04T13:02:35.957189+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"uui2uto9"}}
+{"time":"2026-05-04T13:02:35.957206+02:00","level":"INFO","msg":"sender: closed","stream_id":"uui2uto9"}
+{"time":"2026-05-04T13:02:35.957263+02:00","level":"INFO","msg":"stream: closed","id":"uui2uto9"}

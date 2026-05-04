@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:53:27.616479+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:53:27.61651+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125327-nefoazsm/logs/debug-core.log"}
+{"time":"2026-05-04T12:53:27.728226+02:00","level":"INFO","msg":"created new stream","id":"nefoazsm"}
+{"time":"2026-05-04T12:53:27.728279+02:00","level":"INFO","msg":"stream: started","id":"nefoazsm"}
+{"time":"2026-05-04T12:53:27.728281+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"nefoazsm"}}
+{"time":"2026-05-04T12:53:27.728307+02:00","level":"INFO","msg":"sender: started","stream_id":"nefoazsm"}
+{"time":"2026-05-04T12:53:27.728328+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"nefoazsm"}}
+{"time":"2026-05-04T12:53:28.464576+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:53:29.087801+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:53:29.088748+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:53:29.565071+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.234099542},{"desc":"uploading config.yaml","runtime_seconds":0.022470625,"progress":"897B/897B"},{"desc":"uploading output.log","runtime_seconds":0.022393833}],"total_operations":3}}
+{"time":"2026-05-04T12:53:30.01741+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:53:31.611639+02:00","level":"INFO","msg":"stream: closing","id":"nefoazsm"}
+{"time":"2026-05-04T12:53:31.611678+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"nefoazsm"}}
+{"time":"2026-05-04T12:53:31.61171+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"nefoazsm"}}
+{"time":"2026-05-04T12:53:31.611718+02:00","level":"INFO","msg":"sender: closed","stream_id":"nefoazsm"}
+{"time":"2026-05-04T12:53:31.611893+02:00","level":"INFO","msg":"stream: closed","id":"nefoazsm"}

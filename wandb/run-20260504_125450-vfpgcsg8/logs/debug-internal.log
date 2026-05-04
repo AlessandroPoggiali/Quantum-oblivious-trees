@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:54:50.143525+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:54:50.143552+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125450-vfpgcsg8/logs/debug-core.log"}
+{"time":"2026-05-04T12:54:50.255027+02:00","level":"INFO","msg":"created new stream","id":"vfpgcsg8"}
+{"time":"2026-05-04T12:54:50.255074+02:00","level":"INFO","msg":"stream: started","id":"vfpgcsg8"}
+{"time":"2026-05-04T12:54:50.255069+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"vfpgcsg8"}}
+{"time":"2026-05-04T12:54:50.255113+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"vfpgcsg8"}}
+{"time":"2026-05-04T12:54:50.2551+02:00","level":"INFO","msg":"sender: started","stream_id":"vfpgcsg8"}
+{"time":"2026-05-04T12:54:50.784449+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:54:51.380985+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:54:51.382284+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:54:51.885764+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.245060458},{"desc":"uploading config.yaml","runtime_seconds":0.024043209,"progress":"899B/899B"},{"desc":"uploading output.log","runtime_seconds":0.023982}],"total_operations":3}}
+{"time":"2026-05-04T12:54:52.700121+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:54:54.026819+02:00","level":"INFO","msg":"stream: closing","id":"vfpgcsg8"}
+{"time":"2026-05-04T12:54:54.026866+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"vfpgcsg8"}}
+{"time":"2026-05-04T12:54:54.026906+02:00","level":"INFO","msg":"sender: closed","stream_id":"vfpgcsg8"}
+{"time":"2026-05-04T12:54:54.026904+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"vfpgcsg8"}}
+{"time":"2026-05-04T12:54:54.027106+02:00","level":"INFO","msg":"stream: closed","id":"vfpgcsg8"}

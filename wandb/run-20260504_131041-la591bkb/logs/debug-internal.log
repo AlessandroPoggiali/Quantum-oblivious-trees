@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:10:41.508216+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:10:41.508237+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_131041-la591bkb/logs/debug-core.log"}
+{"time":"2026-05-04T13:10:41.617561+02:00","level":"INFO","msg":"created new stream","id":"la591bkb"}
+{"time":"2026-05-04T13:10:41.617638+02:00","level":"INFO","msg":"stream: started","id":"la591bkb"}
+{"time":"2026-05-04T13:10:41.617648+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"la591bkb"}}
+{"time":"2026-05-04T13:10:41.617687+02:00","level":"INFO","msg":"sender: started","stream_id":"la591bkb"}
+{"time":"2026-05-04T13:10:41.617638+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"la591bkb"}}
+{"time":"2026-05-04T13:10:42.195511+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:10:42.811956+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:10:42.813489+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:10:43.340101+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.26509825},{"desc":"uploading output.log","runtime_seconds":0.040439458},{"desc":"uploading config.yaml","runtime_seconds":0.040439083,"progress":"893B/893B"}],"total_operations":3}}
+{"time":"2026-05-04T13:10:44.067006+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:10:45.37246+02:00","level":"INFO","msg":"stream: closing","id":"la591bkb"}
+{"time":"2026-05-04T13:10:45.372506+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"la591bkb"}}
+{"time":"2026-05-04T13:10:45.372544+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"la591bkb"}}
+{"time":"2026-05-04T13:10:45.372565+02:00","level":"INFO","msg":"sender: closed","stream_id":"la591bkb"}
+{"time":"2026-05-04T13:10:45.372796+02:00","level":"INFO","msg":"stream: closed","id":"la591bkb"}

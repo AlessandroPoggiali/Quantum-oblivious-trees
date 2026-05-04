@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:50:14.073389+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:50:14.073422+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125014-qwkyelux/logs/debug-core.log"}
+{"time":"2026-05-04T12:50:14.182034+02:00","level":"INFO","msg":"created new stream","id":"qwkyelux"}
+{"time":"2026-05-04T12:50:14.182099+02:00","level":"INFO","msg":"stream: started","id":"qwkyelux"}
+{"time":"2026-05-04T12:50:14.18212+02:00","level":"INFO","msg":"sender: started","stream_id":"qwkyelux"}
+{"time":"2026-05-04T12:50:14.182096+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"qwkyelux"}}
+{"time":"2026-05-04T12:50:14.182142+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"qwkyelux"}}
+{"time":"2026-05-04T12:50:14.698218+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:50:15.383793+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:50:15.38424+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:50:15.793307+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.19428325,"progress":"277B/277B"},{"desc":"saving job artifact","runtime_seconds":0.158582333}],"total_operations":2}}
+{"time":"2026-05-04T12:50:16.780965+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:50:18.26839+02:00","level":"INFO","msg":"stream: closing","id":"qwkyelux"}
+{"time":"2026-05-04T12:50:18.268431+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"qwkyelux"}}
+{"time":"2026-05-04T12:50:18.268478+02:00","level":"INFO","msg":"sender: closed","stream_id":"qwkyelux"}
+{"time":"2026-05-04T12:50:18.268465+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"qwkyelux"}}
+{"time":"2026-05-04T12:50:18.268782+02:00","level":"INFO","msg":"stream: closed","id":"qwkyelux"}

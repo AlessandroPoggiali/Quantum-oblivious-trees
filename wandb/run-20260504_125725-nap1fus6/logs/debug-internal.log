@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:57:25.302427+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:57:25.302476+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125725-nap1fus6/logs/debug-core.log"}
+{"time":"2026-05-04T12:57:25.414377+02:00","level":"INFO","msg":"created new stream","id":"nap1fus6"}
+{"time":"2026-05-04T12:57:25.414431+02:00","level":"INFO","msg":"stream: started","id":"nap1fus6"}
+{"time":"2026-05-04T12:57:25.414431+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"nap1fus6"}}
+{"time":"2026-05-04T12:57:25.414455+02:00","level":"INFO","msg":"sender: started","stream_id":"nap1fus6"}
+{"time":"2026-05-04T12:57:25.414479+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"nap1fus6"}}
+{"time":"2026-05-04T12:57:25.924165+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:57:26.510265+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:57:26.511366+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:57:27.026695+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.271123417},{"desc":"uploading config.yaml","runtime_seconds":0.064998167,"progress":"896B/896B"},{"desc":"uploading output.log","runtime_seconds":0.064958292}],"total_operations":3}}
+{"time":"2026-05-04T12:57:27.518209+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:57:28.852649+02:00","level":"INFO","msg":"stream: closing","id":"nap1fus6"}
+{"time":"2026-05-04T12:57:28.852696+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"nap1fus6"}}
+{"time":"2026-05-04T12:57:28.852741+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"nap1fus6"}}
+{"time":"2026-05-04T12:57:28.852764+02:00","level":"INFO","msg":"sender: closed","stream_id":"nap1fus6"}
+{"time":"2026-05-04T12:57:28.853048+02:00","level":"INFO","msg":"stream: closed","id":"nap1fus6"}

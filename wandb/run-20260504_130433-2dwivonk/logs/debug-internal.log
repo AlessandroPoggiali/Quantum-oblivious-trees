@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:04:33.703382+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:04:33.703424+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130433-2dwivonk/logs/debug-core.log"}
+{"time":"2026-05-04T13:04:33.815232+02:00","level":"INFO","msg":"created new stream","id":"2dwivonk"}
+{"time":"2026-05-04T13:04:33.815294+02:00","level":"INFO","msg":"stream: started","id":"2dwivonk"}
+{"time":"2026-05-04T13:04:33.815287+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"2dwivonk"}}
+{"time":"2026-05-04T13:04:33.815325+02:00","level":"INFO","msg":"sender: started","stream_id":"2dwivonk"}
+{"time":"2026-05-04T13:04:33.815338+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"2dwivonk"}}
+{"time":"2026-05-04T13:04:34.324363+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:04:34.965377+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:04:34.966282+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:04:35.418461+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.223417959,"progress":"279B/279B"},{"desc":"saving job artifact","runtime_seconds":0.172018791}],"total_operations":2}}
+{"time":"2026-05-04T13:04:36.035597+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:04:37.3546+02:00","level":"INFO","msg":"stream: closing","id":"2dwivonk"}
+{"time":"2026-05-04T13:04:37.354655+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"2dwivonk"}}
+{"time":"2026-05-04T13:04:37.354695+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"2dwivonk"}}
+{"time":"2026-05-04T13:04:37.35474+02:00","level":"INFO","msg":"sender: closed","stream_id":"2dwivonk"}
+{"time":"2026-05-04T13:04:37.355209+02:00","level":"INFO","msg":"stream: closed","id":"2dwivonk"}

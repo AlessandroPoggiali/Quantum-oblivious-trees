@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:48:55.916424+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:48:55.916462+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_124855-jpjfwxyu/logs/debug-core.log"}
+{"time":"2026-05-04T12:48:56.027969+02:00","level":"INFO","msg":"created new stream","id":"jpjfwxyu"}
+{"time":"2026-05-04T12:48:56.028016+02:00","level":"INFO","msg":"stream: started","id":"jpjfwxyu"}
+{"time":"2026-05-04T12:48:56.028021+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"jpjfwxyu"}}
+{"time":"2026-05-04T12:48:56.028047+02:00","level":"INFO","msg":"sender: started","stream_id":"jpjfwxyu"}
+{"time":"2026-05-04T12:48:56.028067+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jpjfwxyu"}}
+{"time":"2026-05-04T12:48:56.52155+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:48:57.124398+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:48:57.125357+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:48:57.630053+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.2597345},{"desc":"uploading config.yaml","runtime_seconds":0.055487125,"progress":"891B/891B"},{"desc":"uploading output.log","runtime_seconds":0.0554735}],"total_operations":3}}
+{"time":"2026-05-04T12:48:58.249662+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:48:59.60011+02:00","level":"INFO","msg":"stream: closing","id":"jpjfwxyu"}
+{"time":"2026-05-04T12:48:59.600153+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"jpjfwxyu"}}
+{"time":"2026-05-04T12:48:59.60019+02:00","level":"INFO","msg":"sender: closed","stream_id":"jpjfwxyu"}
+{"time":"2026-05-04T12:48:59.600184+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"jpjfwxyu"}}
+{"time":"2026-05-04T12:48:59.600451+02:00","level":"INFO","msg":"stream: closed","id":"jpjfwxyu"}

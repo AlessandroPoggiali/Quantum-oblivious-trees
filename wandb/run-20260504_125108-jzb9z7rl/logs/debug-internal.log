@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:51:08.968569+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:51:08.968603+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125108-jzb9z7rl/logs/debug-core.log"}
+{"time":"2026-05-04T12:51:09.07963+02:00","level":"INFO","msg":"created new stream","id":"jzb9z7rl"}
+{"time":"2026-05-04T12:51:09.079914+02:00","level":"INFO","msg":"stream: started","id":"jzb9z7rl"}
+{"time":"2026-05-04T12:51:09.080068+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jzb9z7rl"}}
+{"time":"2026-05-04T12:51:09.080356+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"jzb9z7rl"}}
+{"time":"2026-05-04T12:51:09.080391+02:00","level":"INFO","msg":"sender: started","stream_id":"jzb9z7rl"}
+{"time":"2026-05-04T12:51:09.570649+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:51:10.124439+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:51:10.125385+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:51:10.682607+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.556699958}],"total_operations":1}}
+{"time":"2026-05-04T12:51:12.08684+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:51:13.504766+02:00","level":"INFO","msg":"stream: closing","id":"jzb9z7rl"}
+{"time":"2026-05-04T12:51:13.504804+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"jzb9z7rl"}}
+{"time":"2026-05-04T12:51:13.504848+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"jzb9z7rl"}}
+{"time":"2026-05-04T12:51:13.504864+02:00","level":"INFO","msg":"sender: closed","stream_id":"jzb9z7rl"}
+{"time":"2026-05-04T12:51:13.505094+02:00","level":"INFO","msg":"stream: closed","id":"jzb9z7rl"}

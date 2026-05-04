@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:51:33.995937+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:51:33.995991+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125133-afhlo0tm/logs/debug-core.log"}
+{"time":"2026-05-04T12:51:34.106747+02:00","level":"INFO","msg":"created new stream","id":"afhlo0tm"}
+{"time":"2026-05-04T12:51:34.106787+02:00","level":"INFO","msg":"stream: started","id":"afhlo0tm"}
+{"time":"2026-05-04T12:51:34.106787+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"afhlo0tm"}}
+{"time":"2026-05-04T12:51:34.106814+02:00","level":"INFO","msg":"sender: started","stream_id":"afhlo0tm"}
+{"time":"2026-05-04T12:51:34.106829+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"afhlo0tm"}}
+{"time":"2026-05-04T12:51:34.599838+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:51:35.229598+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:51:35.230536+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:51:35.703433+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.215817458},{"desc":"uploading config.yaml","runtime_seconds":0.01267625,"progress":"895B/895B"},{"desc":"uploading output.log","runtime_seconds":0.012569708}],"total_operations":3}}
+{"time":"2026-05-04T12:51:36.386945+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:51:37.719481+02:00","level":"INFO","msg":"stream: closing","id":"afhlo0tm"}
+{"time":"2026-05-04T12:51:37.719499+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"afhlo0tm"}}
+{"time":"2026-05-04T12:51:37.719513+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"afhlo0tm"}}
+{"time":"2026-05-04T12:51:37.719515+02:00","level":"INFO","msg":"sender: closed","stream_id":"afhlo0tm"}
+{"time":"2026-05-04T12:51:37.719638+02:00","level":"INFO","msg":"stream: closed","id":"afhlo0tm"}

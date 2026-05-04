@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:04:53.748331+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:04:53.748369+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130453-2iux1lhj/logs/debug-core.log"}
+{"time":"2026-05-04T13:04:53.859865+02:00","level":"INFO","msg":"created new stream","id":"2iux1lhj"}
+{"time":"2026-05-04T13:04:53.859921+02:00","level":"INFO","msg":"stream: started","id":"2iux1lhj"}
+{"time":"2026-05-04T13:04:53.859919+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"2iux1lhj"}}
+{"time":"2026-05-04T13:04:53.859937+02:00","level":"INFO","msg":"sender: started","stream_id":"2iux1lhj"}
+{"time":"2026-05-04T13:04:53.859964+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"2iux1lhj"}}
+{"time":"2026-05-04T13:04:54.427035+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:04:55.000095+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:04:55.00117+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:04:55.525404+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.247196833},{"desc":"uploading output.log","runtime_seconds":0.034754042},{"desc":"uploading config.yaml","runtime_seconds":0.034714333,"progress":"892B/892B"}],"total_operations":3}}
+{"time":"2026-05-04T13:04:56.001535+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:04:57.371572+02:00","level":"INFO","msg":"stream: closing","id":"2iux1lhj"}
+{"time":"2026-05-04T13:04:57.371601+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"2iux1lhj"}}
+{"time":"2026-05-04T13:04:57.371629+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"2iux1lhj"}}
+{"time":"2026-05-04T13:04:57.371646+02:00","level":"INFO","msg":"sender: closed","stream_id":"2iux1lhj"}
+{"time":"2026-05-04T13:04:57.371796+02:00","level":"INFO","msg":"stream: closed","id":"2iux1lhj"}

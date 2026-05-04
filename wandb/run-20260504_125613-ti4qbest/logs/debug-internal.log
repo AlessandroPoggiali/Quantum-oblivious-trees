@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:56:13.911958+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:56:13.912006+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125613-ti4qbest/logs/debug-core.log"}
+{"time":"2026-05-04T12:56:14.026185+02:00","level":"INFO","msg":"created new stream","id":"ti4qbest"}
+{"time":"2026-05-04T12:56:14.026235+02:00","level":"INFO","msg":"stream: started","id":"ti4qbest"}
+{"time":"2026-05-04T12:56:14.026241+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ti4qbest"}}
+{"time":"2026-05-04T12:56:14.026264+02:00","level":"INFO","msg":"sender: started","stream_id":"ti4qbest"}
+{"time":"2026-05-04T12:56:14.026278+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ti4qbest"}}
+{"time":"2026-05-04T12:56:14.523734+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:56:15.049649+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:56:15.050734+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:56:15.618571+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.301371709},{"desc":"uploading config.yaml","runtime_seconds":0.0811055,"progress":"903B/903B"},{"desc":"uploading output.log","runtime_seconds":0.081056375}],"total_operations":3}}
+{"time":"2026-05-04T12:56:16.254427+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:56:17.61768+02:00","level":"INFO","msg":"stream: closing","id":"ti4qbest"}
+{"time":"2026-05-04T12:56:17.617715+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"ti4qbest"}}
+{"time":"2026-05-04T12:56:17.617751+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ti4qbest"}}
+{"time":"2026-05-04T12:56:17.617766+02:00","level":"INFO","msg":"sender: closed","stream_id":"ti4qbest"}
+{"time":"2026-05-04T12:56:17.617956+02:00","level":"INFO","msg":"stream: closed","id":"ti4qbest"}

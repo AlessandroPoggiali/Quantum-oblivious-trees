@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:57:28.869066+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:57:28.869116+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125728-a4rwewr0/logs/debug-core.log"}
+{"time":"2026-05-04T12:57:28.981831+02:00","level":"INFO","msg":"created new stream","id":"a4rwewr0"}
+{"time":"2026-05-04T12:57:28.981878+02:00","level":"INFO","msg":"stream: started","id":"a4rwewr0"}
+{"time":"2026-05-04T12:57:28.981876+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"a4rwewr0"}}
+{"time":"2026-05-04T12:57:28.981916+02:00","level":"INFO","msg":"sender: started","stream_id":"a4rwewr0"}
+{"time":"2026-05-04T12:57:28.981925+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"a4rwewr0"}}
+{"time":"2026-05-04T12:57:29.615634+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:57:30.185639+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:57:30.186819+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:57:30.705875+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.219201167},{"desc":"uploading output.log","runtime_seconds":0.009541333},{"desc":"uploading config.yaml","runtime_seconds":0.009496583,"progress":"896B/896B"}],"total_operations":3}}
+{"time":"2026-05-04T12:57:31.325447+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:57:32.664805+02:00","level":"INFO","msg":"stream: closing","id":"a4rwewr0"}
+{"time":"2026-05-04T12:57:32.664899+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"a4rwewr0"}}
+{"time":"2026-05-04T12:57:32.664967+02:00","level":"INFO","msg":"sender: closed","stream_id":"a4rwewr0"}
+{"time":"2026-05-04T12:57:32.664947+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"a4rwewr0"}}
+{"time":"2026-05-04T12:57:32.665128+02:00","level":"INFO","msg":"stream: closed","id":"a4rwewr0"}

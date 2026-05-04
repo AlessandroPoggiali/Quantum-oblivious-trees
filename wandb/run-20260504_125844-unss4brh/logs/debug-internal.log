@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:58:44.916489+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:58:44.916518+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125844-unss4brh/logs/debug-core.log"}
+{"time":"2026-05-04T12:58:45.0256+02:00","level":"INFO","msg":"created new stream","id":"unss4brh"}
+{"time":"2026-05-04T12:58:45.025683+02:00","level":"INFO","msg":"stream: started","id":"unss4brh"}
+{"time":"2026-05-04T12:58:45.025682+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"unss4brh"}}
+{"time":"2026-05-04T12:58:45.02571+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"unss4brh"}}
+{"time":"2026-05-04T12:58:45.02576+02:00","level":"INFO","msg":"sender: started","stream_id":"unss4brh"}
+{"time":"2026-05-04T12:58:45.427775+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:58:46.059359+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:58:46.060041+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:58:46.526803+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.239012042,"progress":"262B/262B"},{"desc":"saving job artifact","runtime_seconds":0.219934334}],"total_operations":2}}
+{"time":"2026-05-04T12:58:47.154858+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:58:48.482817+02:00","level":"INFO","msg":"stream: closing","id":"unss4brh"}
+{"time":"2026-05-04T12:58:48.482835+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"unss4brh"}}
+{"time":"2026-05-04T12:58:48.48285+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"unss4brh"}}
+{"time":"2026-05-04T12:58:48.482856+02:00","level":"INFO","msg":"sender: closed","stream_id":"unss4brh"}
+{"time":"2026-05-04T12:58:48.48292+02:00","level":"INFO","msg":"stream: closed","id":"unss4brh"}

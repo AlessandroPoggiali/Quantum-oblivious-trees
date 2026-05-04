@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:05:51.425751+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:05:51.425789+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130551-auup2blx/logs/debug-core.log"}
+{"time":"2026-05-04T13:05:51.53742+02:00","level":"INFO","msg":"created new stream","id":"auup2blx"}
+{"time":"2026-05-04T13:05:51.537473+02:00","level":"INFO","msg":"stream: started","id":"auup2blx"}
+{"time":"2026-05-04T13:05:51.537475+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"auup2blx"}}
+{"time":"2026-05-04T13:05:51.537505+02:00","level":"INFO","msg":"sender: started","stream_id":"auup2blx"}
+{"time":"2026-05-04T13:05:51.537507+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"auup2blx"}}
+{"time":"2026-05-04T13:05:52.167147+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:05:52.713737+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:05:52.714653+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:05:53.273557+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.309386916},{"desc":"uploading config.yaml","runtime_seconds":0.09463525,"progress":"896B/896B"},{"desc":"uploading output.log","runtime_seconds":0.094631625}],"total_operations":3}}
+{"time":"2026-05-04T13:05:53.908254+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:05:55.357422+02:00","level":"INFO","msg":"stream: closing","id":"auup2blx"}
+{"time":"2026-05-04T13:05:55.357473+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"auup2blx"}}
+{"time":"2026-05-04T13:05:55.357513+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"auup2blx"}}
+{"time":"2026-05-04T13:05:55.357538+02:00","level":"INFO","msg":"sender: closed","stream_id":"auup2blx"}
+{"time":"2026-05-04T13:05:55.357748+02:00","level":"INFO","msg":"stream: closed","id":"auup2blx"}

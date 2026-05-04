@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:07:09.017234+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:07:09.017278+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130709-wmgufkhq/logs/debug-core.log"}
+{"time":"2026-05-04T13:07:09.133237+02:00","level":"INFO","msg":"created new stream","id":"wmgufkhq"}
+{"time":"2026-05-04T13:07:09.133296+02:00","level":"INFO","msg":"stream: started","id":"wmgufkhq"}
+{"time":"2026-05-04T13:07:09.13329+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wmgufkhq"}}
+{"time":"2026-05-04T13:07:09.133324+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wmgufkhq"}}
+{"time":"2026-05-04T13:07:09.133353+02:00","level":"INFO","msg":"sender: started","stream_id":"wmgufkhq"}
+{"time":"2026-05-04T13:07:09.554345+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:07:10.071004+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:07:10.072095+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:07:10.646723+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.346233416},{"desc":"uploading config.yaml","runtime_seconds":0.12420925,"progress":"891B/891B"},{"desc":"uploading output.log","runtime_seconds":0.124180458}],"total_operations":3}}
+{"time":"2026-05-04T13:07:11.048405+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:07:12.507167+02:00","level":"INFO","msg":"stream: closing","id":"wmgufkhq"}
+{"time":"2026-05-04T13:07:12.507259+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"wmgufkhq"}}
+{"time":"2026-05-04T13:07:12.507313+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wmgufkhq"}}
+{"time":"2026-05-04T13:07:12.507337+02:00","level":"INFO","msg":"sender: closed","stream_id":"wmgufkhq"}
+{"time":"2026-05-04T13:07:12.50759+02:00","level":"INFO","msg":"stream: closed","id":"wmgufkhq"}

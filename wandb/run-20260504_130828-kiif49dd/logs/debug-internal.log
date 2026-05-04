@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:08:28.629191+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:08:28.629276+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130828-kiif49dd/logs/debug-core.log"}
+{"time":"2026-05-04T13:08:28.74219+02:00","level":"INFO","msg":"created new stream","id":"kiif49dd"}
+{"time":"2026-05-04T13:08:28.742253+02:00","level":"INFO","msg":"stream: started","id":"kiif49dd"}
+{"time":"2026-05-04T13:08:28.742255+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"kiif49dd"}}
+{"time":"2026-05-04T13:08:28.742283+02:00","level":"INFO","msg":"sender: started","stream_id":"kiif49dd"}
+{"time":"2026-05-04T13:08:28.742291+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"kiif49dd"}}
+{"time":"2026-05-04T13:08:29.177871+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:08:29.857323+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:08:29.858329+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:08:30.29477+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.222305,"progress":"277B/277B"},{"desc":"saving job artifact","runtime_seconds":0.1863865}],"total_operations":2}}
+{"time":"2026-05-04T13:08:31.048512+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:08:32.757424+02:00","level":"INFO","msg":"stream: closing","id":"kiif49dd"}
+{"time":"2026-05-04T13:08:32.757474+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"kiif49dd"}}
+{"time":"2026-05-04T13:08:32.75752+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"kiif49dd"}}
+{"time":"2026-05-04T13:08:32.757538+02:00","level":"INFO","msg":"sender: closed","stream_id":"kiif49dd"}
+{"time":"2026-05-04T13:08:32.757766+02:00","level":"INFO","msg":"stream: closed","id":"kiif49dd"}

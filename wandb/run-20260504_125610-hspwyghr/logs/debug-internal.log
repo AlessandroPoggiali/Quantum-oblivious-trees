@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:56:10.277809+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:56:10.277839+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125610-hspwyghr/logs/debug-core.log"}
+{"time":"2026-05-04T12:56:10.388517+02:00","level":"INFO","msg":"created new stream","id":"hspwyghr"}
+{"time":"2026-05-04T12:56:10.38856+02:00","level":"INFO","msg":"stream: started","id":"hspwyghr"}
+{"time":"2026-05-04T12:56:10.38856+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"hspwyghr"}}
+{"time":"2026-05-04T12:56:10.388589+02:00","level":"INFO","msg":"sender: started","stream_id":"hspwyghr"}
+{"time":"2026-05-04T12:56:10.388605+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"hspwyghr"}}
+{"time":"2026-05-04T12:56:10.861177+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:56:11.394233+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:56:11.39544+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:56:11.964911+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.303439959},{"desc":"uploading config.yaml","runtime_seconds":0.097049667,"progress":"903B/903B"},{"desc":"uploading output.log","runtime_seconds":0.096965542}],"total_operations":3}}
+{"time":"2026-05-04T12:56:12.512867+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:56:13.89607+02:00","level":"INFO","msg":"stream: closing","id":"hspwyghr"}
+{"time":"2026-05-04T12:56:13.896131+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"hspwyghr"}}
+{"time":"2026-05-04T12:56:13.896171+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"hspwyghr"}}
+{"time":"2026-05-04T12:56:13.896183+02:00","level":"INFO","msg":"sender: closed","stream_id":"hspwyghr"}
+{"time":"2026-05-04T12:56:13.896408+02:00","level":"INFO","msg":"stream: closed","id":"hspwyghr"}

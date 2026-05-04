@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:51:37.729593+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:51:37.729614+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125137-lk7w9was/logs/debug-core.log"}
+{"time":"2026-05-04T12:51:37.837544+02:00","level":"INFO","msg":"created new stream","id":"lk7w9was"}
+{"time":"2026-05-04T12:51:37.837604+02:00","level":"INFO","msg":"stream: started","id":"lk7w9was"}
+{"time":"2026-05-04T12:51:37.837593+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"lk7w9was"}}
+{"time":"2026-05-04T12:51:37.837614+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"lk7w9was"}}
+{"time":"2026-05-04T12:51:37.837648+02:00","level":"INFO","msg":"sender: started","stream_id":"lk7w9was"}
+{"time":"2026-05-04T12:51:38.382294+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:51:38.972694+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:51:38.973677+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:51:39.483429+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.227175583},{"desc":"uploading config.yaml","runtime_seconds":0.001341958},{"desc":"uploading output.log","runtime_seconds":0.001312916}],"total_operations":3}}
+{"time":"2026-05-04T12:51:39.952225+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:51:41.327221+02:00","level":"INFO","msg":"stream: closing","id":"lk7w9was"}
+{"time":"2026-05-04T12:51:41.327264+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"lk7w9was"}}
+{"time":"2026-05-04T12:51:41.327302+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"lk7w9was"}}
+{"time":"2026-05-04T12:51:41.327313+02:00","level":"INFO","msg":"sender: closed","stream_id":"lk7w9was"}
+{"time":"2026-05-04T12:51:41.327592+02:00","level":"INFO","msg":"stream: closed","id":"lk7w9was"}

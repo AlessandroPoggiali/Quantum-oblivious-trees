@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:57:36.30979+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:57:36.309841+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125736-ifb8ugvs/logs/debug-core.log"}
+{"time":"2026-05-04T12:57:36.424051+02:00","level":"INFO","msg":"created new stream","id":"ifb8ugvs"}
+{"time":"2026-05-04T12:57:36.424114+02:00","level":"INFO","msg":"stream: started","id":"ifb8ugvs"}
+{"time":"2026-05-04T12:57:36.42411+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ifb8ugvs"}}
+{"time":"2026-05-04T12:57:36.424126+02:00","level":"INFO","msg":"sender: started","stream_id":"ifb8ugvs"}
+{"time":"2026-05-04T12:57:36.424161+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ifb8ugvs"}}
+{"time":"2026-05-04T12:57:36.865543+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:57:37.456665+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:57:37.457587+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:57:37.968763+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.20672125}],"total_operations":1}}
+{"time":"2026-05-04T12:57:38.640001+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:57:39.979754+02:00","level":"INFO","msg":"stream: closing","id":"ifb8ugvs"}
+{"time":"2026-05-04T12:57:39.979805+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"ifb8ugvs"}}
+{"time":"2026-05-04T12:57:39.979842+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ifb8ugvs"}}
+{"time":"2026-05-04T12:57:39.979869+02:00","level":"INFO","msg":"sender: closed","stream_id":"ifb8ugvs"}
+{"time":"2026-05-04T12:57:39.980182+02:00","level":"INFO","msg":"stream: closed","id":"ifb8ugvs"}

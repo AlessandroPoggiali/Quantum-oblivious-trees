@@ -9,6 +9,10 @@ import numpy as np
 import torch
 import torch.nn as nn
 import matplotlib.pyplot as plt
+try:
+    import optuna
+except ImportError:
+    optuna = None
 
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.inspection import DecisionBoundaryDisplay
@@ -243,6 +247,11 @@ def parse_args():
     parser.add_argument('--datasets', type=str, default='all', help='Specific datasets (comma-separated) or "all"')
     parser.add_argument('--single-dataset', type=str, default=None, help='Test single dataset (legacy)')
     parser.add_argument('--num-runs', type=int, default=1, help='Number of runs per dataset with different random seeds')
+    parser.add_argument('--optuna-trials-classical', type=int, default=0, help='Optuna trials for classical model (0 disables tuning)')
+    parser.add_argument('--optuna-trials-quantum', type=int, default=0, help='Optuna trials for quantum model (0 disables tuning)')
+    parser.add_argument('--optuna-timeout', type=int, default=0, help='Optuna timeout in seconds per study (0 disables timeout)')
+    parser.add_argument('--optuna-seed', type=int, default=2026, help='Random seed for Optuna samplers')
+    parser.add_argument('--optuna-epochs', type=int, default=None, help='Epochs used during Optuna tuning (defaults to --epochs)')
     return parser.parse_args()
 
 
@@ -337,6 +346,148 @@ def train_and_evaluate(model: ObliviousTree,
     }
     return metrics, history
 
+
+def _require_optuna_if_enabled(args):
+    if (args.optuna_trials_classical > 0 or args.optuna_trials_quantum > 0) and optuna is None:
+        raise ImportError("Optuna is required for hyperparameter optimization. Install it with: pip install optuna")
+
+
+def _build_classical_model(actual_d: int,
+                           feature_indices: list,
+                           device: torch.device,
+                           num_classes: int,
+                           params: Dict[str, Any]) -> ObliviousTree:
+    return ObliviousTree(
+        d=actual_d,
+        feature_indices=feature_indices,
+        device=device,
+        alpha_init=params['alpha_init'],
+        alpha_final=params['alpha_final'],
+        epochs=params['epochs'],
+        batch_size=params['batch_size'],
+        lr=params['lr'],
+        use_ema=params['use_ema'],
+        ema_rho=params['ema_rho'],
+        num_classes=num_classes,
+        use_classical=True,
+        classical_hidden_layers=0,
+        classical_hidden_size=0,
+        use_bias=params['use_bias']
+    )
+
+
+def _build_quantum_model(actual_d: int,
+                         feature_indices: list,
+                         device: torch.device,
+                         num_classes: int,
+                         args,
+                         params: Dict[str, Any]) -> ObliviousTree:
+    return ObliviousTree(
+        d=actual_d,
+        feature_indices=feature_indices,
+        device=device,
+        alpha_init=params['alpha_init'],
+        alpha_final=params['alpha_final'],
+        epochs=params['epochs'],
+        batch_size=params['batch_size'],
+        lr=params['lr'],
+        use_ema=params['use_ema'],
+        ema_rho=params['ema_rho'],
+        num_classes=num_classes,
+        q_reps=params['q_reps'],
+        q_dev=args.q_dev,
+        q_shots=args.q_shots,
+        ansatz=params['ansatz'],
+        use_classical=False
+    )
+
+
+def optimize_classical_hyperparams(args,
+                                   actual_d: int,
+                                   feature_indices: list,
+                                   device: torch.device,
+                                   num_classes: int,
+                                   X_train: np.ndarray,
+                                   Y_train: np.ndarray,
+                                   X_val: np.ndarray,
+                                   Y_val: np.ndarray,
+                                   default_params: Dict[str, Any]) -> Dict[str, Any]:
+    if args.optuna_trials_classical <= 0:
+        return default_params
+
+    tuning_epochs = args.optuna_epochs if args.optuna_epochs is not None else args.epochs
+    timeout = args.optuna_timeout if args.optuna_timeout > 0 else None
+    sampler = optuna.samplers.TPESampler(seed=args.optuna_seed)
+    study = optuna.create_study(direction='maximize', sampler=sampler)
+
+    def objective(trial):
+        params = {
+            'alpha_init': trial.suggest_float('alpha_init', 0.1, 5.0, log=True),
+            'alpha_final': trial.suggest_float('alpha_final', 5.0, 80.0, log=True),
+            'batch_size': trial.suggest_categorical('batch_size', [16, 32, 64, 100, 128, 256]),
+            'lr': trial.suggest_float('lr', 1e-4, 5e-2, log=True),
+            'use_ema': trial.suggest_categorical('use_ema', [False, True]),
+            'ema_rho': trial.suggest_float('ema_rho', 1e-3, 0.5, log=True),
+            'epochs': tuning_epochs,
+            'use_bias': default_params['use_bias'],
+        }
+        set_random_seed(args.optuna_seed + trial.number)
+        model = _build_classical_model(actual_d, feature_indices, device, num_classes, params)
+        metrics, _ = train_and_evaluate(model, X_train, Y_train, X_val, Y_val, X_val, Y_val, device)
+        return metrics['val_acc']
+
+    study.optimize(objective, n_trials=args.optuna_trials_classical, timeout=timeout)
+    best_params = dict(default_params)
+    best_params.update(study.best_trial.params)
+    best_params['epochs'] = default_params['epochs']
+    best_params['use_bias'] = default_params['use_bias']
+    print(f"Best classical Optuna val_acc={study.best_value:.4f} with params={study.best_trial.params}")
+    return best_params
+
+
+def optimize_quantum_hyperparams(args,
+                                 actual_d: int,
+                                 feature_indices: list,
+                                 device: torch.device,
+                                 num_classes: int,
+                                 X_train: np.ndarray,
+                                 Y_train: np.ndarray,
+                                 X_val: np.ndarray,
+                                 Y_val: np.ndarray,
+                                 default_params: Dict[str, Any]) -> Dict[str, Any]:
+    if args.optuna_trials_quantum <= 0:
+        return default_params
+
+    tuning_epochs = args.optuna_epochs if args.optuna_epochs is not None else args.epochs
+    timeout = args.optuna_timeout if args.optuna_timeout > 0 else None
+    sampler = optuna.samplers.TPESampler(seed=args.optuna_seed + 991)
+    study = optuna.create_study(direction='maximize', sampler=sampler)
+    q_reps_upper = 2
+
+    def objective(trial):
+        params = {
+            'alpha_init': trial.suggest_float('alpha_init', 0.1, 5.0, log=True),
+            'alpha_final': trial.suggest_float('alpha_final', 5.0, 80.0, log=True),
+            'batch_size': trial.suggest_categorical('batch_size', [16, 32, 64, 100, 128, 256]),
+            'lr': trial.suggest_float('lr', 1e-4, 5e-2, log=True),
+            'use_ema': trial.suggest_categorical('use_ema', [False, True]),
+            'ema_rho': trial.suggest_float('ema_rho', 1e-3, 0.5, log=True),
+            'q_reps': trial.suggest_int('q_reps', 1, q_reps_upper),
+            'ansatz': trial.suggest_categorical('ansatz', ['ry', 'two_param']),
+            'epochs': tuning_epochs,
+        }
+        set_random_seed(args.optuna_seed + trial.number)
+        model = _build_quantum_model(actual_d, feature_indices, device, num_classes, args, params)
+        metrics, _ = train_and_evaluate(model, X_train, Y_train, X_val, Y_val, X_val, Y_val, device)
+        return metrics['val_acc']
+
+    study.optimize(objective, n_trials=args.optuna_trials_quantum, timeout=timeout)
+    best_params = dict(default_params)
+    best_params.update(study.best_trial.params)
+    best_params['epochs'] = default_params['epochs']
+    print(f"Best quantum Optuna val_acc={study.best_value:.4f} with params={study.best_trial.params}")
+    return best_params
+
 def test_dataset(dataset_name: str, args, results_list: list, run_results_list: list) -> bool:
     """Test a single dataset with both classical and quantum models"""
     print(f"\n{'='*80}")
@@ -378,6 +529,48 @@ def test_dataset(dataset_name: str, args, results_list: list, run_results_list: 
         q_reps, q_ansatz = quantum_config
         quantum_params = classical_params
         print(f"Quantum parameters: {quantum_params} (reps={q_reps}, ansatz={q_ansatz})")
+
+    _require_optuna_if_enabled(args)
+    classical_train_params = {
+        'alpha_init': args.alpha_init,
+        'alpha_final': args.alpha_final,
+        'epochs': args.epochs,
+        'batch_size': args.batch_size,
+        'lr': args.lr,
+        'use_ema': args.use_ema == 'y',
+        'ema_rho': args.ema_rho,
+        'use_bias': args.use_bias == 'y',
+    }
+    quantum_train_params = {
+        'alpha_init': args.alpha_init,
+        'alpha_final': args.alpha_final,
+        'epochs': args.epochs,
+        'batch_size': args.batch_size,
+        'lr': args.lr,
+        'use_ema': args.use_ema == 'y',
+        'ema_rho': args.ema_rho,
+        'q_reps': q_reps,
+        'ansatz': q_ansatz,
+    }
+
+    if args.optuna_trials_classical > 0:
+        print(f"Running Optuna for classical model ({args.optuna_trials_classical} trials)...")
+        classical_train_params = optimize_classical_hyperparams(
+            args, actual_d, feature_indices, device, num_classes,
+            X_train, Y_train, X_val, Y_val,
+            classical_train_params
+        )
+
+    if args.optuna_trials_quantum > 0:
+        print(f"Running Optuna for quantum model ({args.optuna_trials_quantum} trials)...")
+        quantum_train_params = optimize_quantum_hyperparams(
+            args, actual_d, feature_indices, device, num_classes,
+            X_train, Y_train, X_val, Y_val,
+            quantum_train_params
+        )
+        q_reps = quantum_train_params['q_reps']
+        q_ansatz = quantum_train_params['ansatz']
+        quantum_params = count_quantum_params(actual_d, q_reps, q_ansatz)
     
     # Store metrics from all runs for averaging
     run_results = defaultdict(list)
@@ -396,22 +589,12 @@ def test_dataset(dataset_name: str, args, results_list: list, run_results_list: 
         
         # ===== CLASSICAL MODEL (no hidden layers) =====
         try:
-            classical_model = ObliviousTree(
-                d=actual_d,
-                feature_indices=feature_indices,
-                device=device,
-                alpha_init=args.alpha_init,
-                alpha_final=args.alpha_final,
-                epochs=args.epochs,
-                batch_size=args.batch_size,
-                lr=args.lr,
-                use_ema=args.use_ema=='y',
-                ema_rho=args.ema_rho,
-                num_classes=num_classes,
-                use_classical=True,
-                classical_hidden_layers=0,
-                classical_hidden_size=0,
-                use_bias=args.use_bias=='y'
+            classical_model = _build_classical_model(
+                actual_d,
+                feature_indices,
+                device,
+                num_classes,
+                classical_train_params
             )
             
             classical_metrics, classical_history = train_and_evaluate(
@@ -440,52 +623,41 @@ def test_dataset(dataset_name: str, args, results_list: list, run_results_list: 
             return False
         
         # ===== QUANTUM MODEL (matched parameters) =====
-        if quantum_config is not None:
-            try:
-                quantum_model = ObliviousTree(
-                    d=actual_d,
-                    feature_indices=feature_indices,
-                    device=device,
-                    alpha_init=args.alpha_init,
-                    alpha_final=args.alpha_final,
-                    epochs=args.epochs,
-                    batch_size=args.batch_size,
-                    lr=args.lr,
-                    use_ema=args.use_ema=='y',
-                    ema_rho=args.ema_rho,
-                    num_classes=num_classes,
-                    q_reps=q_reps,
-                    q_dev=args.q_dev,
-                    q_shots=args.q_shots,
-                    ansatz=q_ansatz,
-                    use_classical=False
-                )
-                quantum_metrics, quantum_history = train_and_evaluate(
-                    quantum_model, X_train, Y_train, X_val, Y_val, X_test, Y_test, device
-                )
-                quantum_histories.append(quantum_history)
-                run_results_list.append({
-                    'timestamp': datetime.now().isoformat(),
-                    'dataset': dataset_name,
-                    'run_idx': run_idx + 1,
-                    'seed': seed,
-                    'model': 'quantum',
-                    'test_acc': quantum_metrics['test_acc'],
-                    'test_ce': quantum_metrics['test_ce'],
-                    'val_acc': quantum_metrics['val_acc'],
-                    'val_ce': quantum_metrics['val_ce'],
-                    'final_train_acc': quantum_metrics['final_train_acc'],
-                    'final_train_ce': quantum_metrics['final_train_ce'],
-                })
-                run_results['quantum_test_acc'].append(quantum_metrics['test_acc'])
-                run_results['quantum_test_ce'].append(quantum_metrics['test_ce'])
-                run_results['quantum_val_acc'].append(quantum_metrics['val_acc'])
-                run_results['quantum_val_ce'].append(quantum_metrics['val_ce'])
-            except Exception as e:
-                if args.num_runs > 1:
-                    print(f" (quantum failed)")
-                else:
-                    print(f"Quantum model failed: {e}")
+        try:
+            quantum_model = _build_quantum_model(
+                actual_d,
+                feature_indices,
+                device,
+                num_classes,
+                args,
+                quantum_train_params
+            )
+            quantum_metrics, quantum_history = train_and_evaluate(
+                quantum_model, X_train, Y_train, X_val, Y_val, X_test, Y_test, device
+            )
+            quantum_histories.append(quantum_history)
+            run_results_list.append({
+                'timestamp': datetime.now().isoformat(),
+                'dataset': dataset_name,
+                'run_idx': run_idx + 1,
+                'seed': seed,
+                'model': 'quantum',
+                'test_acc': quantum_metrics['test_acc'],
+                'test_ce': quantum_metrics['test_ce'],
+                'val_acc': quantum_metrics['val_acc'],
+                'val_ce': quantum_metrics['val_ce'],
+                'final_train_acc': quantum_metrics['final_train_acc'],
+                'final_train_ce': quantum_metrics['final_train_ce'],
+            })
+            run_results['quantum_test_acc'].append(quantum_metrics['test_acc'])
+            run_results['quantum_test_ce'].append(quantum_metrics['test_ce'])
+            run_results['quantum_val_acc'].append(quantum_metrics['val_acc'])
+            run_results['quantum_val_ce'].append(quantum_metrics['val_ce'])
+        except Exception as e:
+            if args.num_runs > 1:
+                print(f" (quantum failed)")
+            else:
+                print(f"Quantum model failed: {e}")
         
         if args.num_runs > 1:
             print(f" ✓")
@@ -550,6 +722,12 @@ def test_dataset(dataset_name: str, args, results_list: list, run_results_list: 
         'num_samples_val': X_val.shape[0],
         'num_samples_test': X_test.shape[0],
         'classical_params': classical_params,
+        'classical_tuned_lr': classical_train_params['lr'],
+        'classical_tuned_batch_size': classical_train_params['batch_size'],
+        'classical_tuned_alpha_init': classical_train_params['alpha_init'],
+        'classical_tuned_alpha_final': classical_train_params['alpha_final'],
+        'classical_tuned_use_ema': classical_train_params['use_ema'],
+        'classical_tuned_ema_rho': classical_train_params['ema_rho'],
         'classical_test_acc': classical_metrics['test_acc'],
         'classical_test_acc_std': np.std(run_results.get('classical_test_acc', [0])) if 'classical_test_acc' in run_results else 0,
         'classical_test_ce': classical_metrics['test_ce'],
@@ -557,6 +735,14 @@ def test_dataset(dataset_name: str, args, results_list: list, run_results_list: 
         'classical_val_acc': classical_metrics['val_acc'],
         'classical_val_ce': classical_metrics['val_ce'],
         'quantum_params': quantum_params if quantum_metrics else None,
+        'quantum_tuned_lr': quantum_train_params['lr'],
+        'quantum_tuned_batch_size': quantum_train_params['batch_size'],
+        'quantum_tuned_alpha_init': quantum_train_params['alpha_init'],
+        'quantum_tuned_alpha_final': quantum_train_params['alpha_final'],
+        'quantum_tuned_use_ema': quantum_train_params['use_ema'],
+        'quantum_tuned_ema_rho': quantum_train_params['ema_rho'],
+        'quantum_tuned_reps': quantum_train_params['q_reps'],
+        'quantum_tuned_ansatz': quantum_train_params['ansatz'],
         'quantum_test_acc': quantum_metrics['test_acc'] if quantum_metrics else None,
         'quantum_test_acc_std': np.std(run_results.get('quantum_test_acc', [0])) if 'quantum_test_acc' in run_results else 0,
         'quantum_test_ce': quantum_metrics['test_ce'] if quantum_metrics else None,

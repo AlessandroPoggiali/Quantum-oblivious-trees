@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:51:17.541653+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:51:17.541696+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125117-dizz3ch1/logs/debug-core.log"}
+{"time":"2026-05-04T12:51:17.65332+02:00","level":"INFO","msg":"created new stream","id":"dizz3ch1"}
+{"time":"2026-05-04T12:51:17.653367+02:00","level":"INFO","msg":"stream: started","id":"dizz3ch1"}
+{"time":"2026-05-04T12:51:17.653362+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"dizz3ch1"}}
+{"time":"2026-05-04T12:51:17.653385+02:00","level":"INFO","msg":"sender: started","stream_id":"dizz3ch1"}
+{"time":"2026-05-04T12:51:17.653425+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"dizz3ch1"}}
+{"time":"2026-05-04T12:51:18.141378+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:51:18.82008+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:51:18.820997+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:51:19.242607+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.185783208,"progress":"278B/278B"},{"desc":"saving job artifact","runtime_seconds":0.13490075}],"total_operations":2}}
+{"time":"2026-05-04T12:51:19.983855+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:51:21.365908+02:00","level":"INFO","msg":"stream: closing","id":"dizz3ch1"}
+{"time":"2026-05-04T12:51:21.365942+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"dizz3ch1"}}
+{"time":"2026-05-04T12:51:21.365977+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"dizz3ch1"}}
+{"time":"2026-05-04T12:51:21.366003+02:00","level":"INFO","msg":"sender: closed","stream_id":"dizz3ch1"}
+{"time":"2026-05-04T12:51:21.366282+02:00","level":"INFO","msg":"stream: closed","id":"dizz3ch1"}

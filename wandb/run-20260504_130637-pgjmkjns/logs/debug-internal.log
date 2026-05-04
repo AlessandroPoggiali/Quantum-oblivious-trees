@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:06:37.825273+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:06:37.825322+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130637-pgjmkjns/logs/debug-core.log"}
+{"time":"2026-05-04T13:06:37.939272+02:00","level":"INFO","msg":"created new stream","id":"pgjmkjns"}
+{"time":"2026-05-04T13:06:37.939319+02:00","level":"INFO","msg":"stream: started","id":"pgjmkjns"}
+{"time":"2026-05-04T13:06:37.939314+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"pgjmkjns"}}
+{"time":"2026-05-04T13:06:37.939371+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"pgjmkjns"}}
+{"time":"2026-05-04T13:06:37.939337+02:00","level":"INFO","msg":"sender: started","stream_id":"pgjmkjns"}
+{"time":"2026-05-04T13:06:38.636507+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:06:39.293574+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:06:39.295069+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:06:39.741084+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.220609459,"progress":"279B/279B"},{"desc":"saving job artifact","runtime_seconds":0.200082542}],"total_operations":2}}
+{"time":"2026-05-04T13:06:40.394666+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:06:41.760467+02:00","level":"INFO","msg":"stream: closing","id":"pgjmkjns"}
+{"time":"2026-05-04T13:06:41.760506+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"pgjmkjns"}}
+{"time":"2026-05-04T13:06:41.760543+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"pgjmkjns"}}
+{"time":"2026-05-04T13:06:41.76057+02:00","level":"INFO","msg":"sender: closed","stream_id":"pgjmkjns"}
+{"time":"2026-05-04T13:06:41.76077+02:00","level":"INFO","msg":"stream: closed","id":"pgjmkjns"}

@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:56:26.279048+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:56:26.279086+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125626-t5zmnles/logs/debug-core.log"}
+{"time":"2026-05-04T12:56:26.390346+02:00","level":"INFO","msg":"created new stream","id":"t5zmnles"}
+{"time":"2026-05-04T12:56:26.390396+02:00","level":"INFO","msg":"stream: started","id":"t5zmnles"}
+{"time":"2026-05-04T12:56:26.390399+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"t5zmnles"}}
+{"time":"2026-05-04T12:56:26.390416+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"t5zmnles"}}
+{"time":"2026-05-04T12:56:26.390458+02:00","level":"INFO","msg":"sender: started","stream_id":"t5zmnles"}
+{"time":"2026-05-04T12:56:26.846009+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:56:27.384024+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:56:27.38496+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:56:27.946368+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.307053166},{"desc":"uploading config.yaml","runtime_seconds":0.036772291,"progress":"892B/892B"},{"desc":"uploading output.log","runtime_seconds":0.03671425}],"total_operations":3}}
+{"time":"2026-05-04T12:56:28.362743+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:56:29.691881+02:00","level":"INFO","msg":"stream: closing","id":"t5zmnles"}
+{"time":"2026-05-04T12:56:29.69192+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"t5zmnles"}}
+{"time":"2026-05-04T12:56:29.691961+02:00","level":"INFO","msg":"sender: closed","stream_id":"t5zmnles"}
+{"time":"2026-05-04T12:56:29.691955+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"t5zmnles"}}
+{"time":"2026-05-04T12:56:29.692183+02:00","level":"INFO","msg":"stream: closed","id":"t5zmnles"}

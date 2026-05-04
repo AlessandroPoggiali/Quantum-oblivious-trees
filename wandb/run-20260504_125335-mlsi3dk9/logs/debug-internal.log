@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:53:35.50682+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:53:35.506855+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125335-mlsi3dk9/logs/debug-core.log"}
+{"time":"2026-05-04T12:53:35.618067+02:00","level":"INFO","msg":"created new stream","id":"mlsi3dk9"}
+{"time":"2026-05-04T12:53:35.618127+02:00","level":"INFO","msg":"stream: started","id":"mlsi3dk9"}
+{"time":"2026-05-04T12:53:35.618128+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"mlsi3dk9"}}
+{"time":"2026-05-04T12:53:35.618146+02:00","level":"INFO","msg":"sender: started","stream_id":"mlsi3dk9"}
+{"time":"2026-05-04T12:53:35.618172+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mlsi3dk9"}}
+{"time":"2026-05-04T12:53:36.133565+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:53:36.729359+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:53:36.729884+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:53:37.236886+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.295647334},{"desc":"uploading config.yaml","runtime_seconds":0.084200167,"progress":"897B/897B"},{"desc":"uploading output.log","runtime_seconds":0.084193792}],"total_operations":3}}
+{"time":"2026-05-04T12:53:37.756682+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:53:39.067577+02:00","level":"INFO","msg":"stream: closing","id":"mlsi3dk9"}
+{"time":"2026-05-04T12:53:39.067627+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"mlsi3dk9"}}
+{"time":"2026-05-04T12:53:39.067665+02:00","level":"INFO","msg":"sender: closed","stream_id":"mlsi3dk9"}
+{"time":"2026-05-04T12:53:39.067659+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mlsi3dk9"}}
+{"time":"2026-05-04T12:53:39.067952+02:00","level":"INFO","msg":"stream: closed","id":"mlsi3dk9"}

@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:54:45.257617+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:54:45.257637+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125445-h2gjz4yo/logs/debug-core.log"}
+{"time":"2026-05-04T12:54:45.367187+02:00","level":"INFO","msg":"created new stream","id":"h2gjz4yo"}
+{"time":"2026-05-04T12:54:45.367231+02:00","level":"INFO","msg":"stream: started","id":"h2gjz4yo"}
+{"time":"2026-05-04T12:54:45.367247+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"h2gjz4yo"}}
+{"time":"2026-05-04T12:54:45.36727+02:00","level":"INFO","msg":"sender: started","stream_id":"h2gjz4yo"}
+{"time":"2026-05-04T12:54:45.367238+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"h2gjz4yo"}}
+{"time":"2026-05-04T12:54:45.869753+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:54:46.595925+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:54:46.597003+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:54:47.031652+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.223022541,"progress":"278B/278B"},{"desc":"saving job artifact","runtime_seconds":0.216521625},{"desc":"uploading config.yaml","runtime_seconds":0.008199125,"progress":"899B/899B"},{"desc":"uploading output.log","runtime_seconds":0.008183708}],"total_operations":4}}
+{"time":"2026-05-04T12:54:48.767851+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:54:50.140633+02:00","level":"INFO","msg":"stream: closing","id":"h2gjz4yo"}
+{"time":"2026-05-04T12:54:50.142289+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"h2gjz4yo"}}
+{"time":"2026-05-04T12:54:50.142318+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"h2gjz4yo"}}
+{"time":"2026-05-04T12:54:50.142447+02:00","level":"INFO","msg":"sender: closed","stream_id":"h2gjz4yo"}
+{"time":"2026-05-04T12:54:50.143086+02:00","level":"INFO","msg":"stream: closed","id":"h2gjz4yo"}

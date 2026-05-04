@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:02:17.600157+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:02:17.600182+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130217-hxz1dtfh/logs/debug-core.log"}
+{"time":"2026-05-04T13:02:17.708944+02:00","level":"INFO","msg":"created new stream","id":"hxz1dtfh"}
+{"time":"2026-05-04T13:02:17.708999+02:00","level":"INFO","msg":"stream: started","id":"hxz1dtfh"}
+{"time":"2026-05-04T13:02:17.708989+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"hxz1dtfh"}}
+{"time":"2026-05-04T13:02:17.709009+02:00","level":"INFO","msg":"sender: started","stream_id":"hxz1dtfh"}
+{"time":"2026-05-04T13:02:17.709032+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"hxz1dtfh"}}
+{"time":"2026-05-04T13:02:18.217009+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:02:18.772772+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:02:18.773215+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:02:19.308963+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.237996459},{"desc":"uploading config.yaml","runtime_seconds":0.017555458,"progress":"896B/896B"},{"desc":"uploading output.log","runtime_seconds":0.01753625}],"total_operations":3}}
+{"time":"2026-05-04T13:02:19.934505+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:02:21.271964+02:00","level":"INFO","msg":"stream: closing","id":"hxz1dtfh"}
+{"time":"2026-05-04T13:02:21.271982+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"hxz1dtfh"}}
+{"time":"2026-05-04T13:02:21.271998+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"hxz1dtfh"}}
+{"time":"2026-05-04T13:02:21.272008+02:00","level":"INFO","msg":"sender: closed","stream_id":"hxz1dtfh"}
+{"time":"2026-05-04T13:02:21.272198+02:00","level":"INFO","msg":"stream: closed","id":"hxz1dtfh"}

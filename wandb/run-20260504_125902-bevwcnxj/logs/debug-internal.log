@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:59:02.942712+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:59:02.942742+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125902-bevwcnxj/logs/debug-core.log"}
+{"time":"2026-05-04T12:59:03.051649+02:00","level":"INFO","msg":"created new stream","id":"bevwcnxj"}
+{"time":"2026-05-04T12:59:03.051701+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"bevwcnxj"}}
+{"time":"2026-05-04T12:59:03.051746+02:00","level":"INFO","msg":"stream: started","id":"bevwcnxj"}
+{"time":"2026-05-04T12:59:03.051746+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"bevwcnxj"}}
+{"time":"2026-05-04T12:59:03.051755+02:00","level":"INFO","msg":"sender: started","stream_id":"bevwcnxj"}
+{"time":"2026-05-04T12:59:03.609437+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:59:04.138848+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:59:04.139873+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:59:04.706977+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.273860625},{"desc":"uploading config.yaml","runtime_seconds":0.056880292,"progress":"893B/893B"},{"desc":"uploading output.log","runtime_seconds":0.056865333}],"total_operations":3}}
+{"time":"2026-05-04T12:59:05.282499+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:59:06.657045+02:00","level":"INFO","msg":"stream: closing","id":"bevwcnxj"}
+{"time":"2026-05-04T12:59:06.657064+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"bevwcnxj"}}
+{"time":"2026-05-04T12:59:06.657079+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"bevwcnxj"}}
+{"time":"2026-05-04T12:59:06.657097+02:00","level":"INFO","msg":"sender: closed","stream_id":"bevwcnxj"}
+{"time":"2026-05-04T12:59:06.657155+02:00","level":"INFO","msg":"stream: closed","id":"bevwcnxj"}

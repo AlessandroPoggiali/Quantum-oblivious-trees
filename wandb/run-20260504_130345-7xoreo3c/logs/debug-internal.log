@@ -1,0 +1,17 @@
+{"time":"2026-05-04T13:03:45.492177+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T13:03:45.492233+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_130345-7xoreo3c/logs/debug-core.log"}
+{"time":"2026-05-04T13:03:45.604402+02:00","level":"INFO","msg":"created new stream","id":"7xoreo3c"}
+{"time":"2026-05-04T13:03:45.604457+02:00","level":"INFO","msg":"stream: started","id":"7xoreo3c"}
+{"time":"2026-05-04T13:03:45.604457+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"7xoreo3c"}}
+{"time":"2026-05-04T13:03:45.604477+02:00","level":"INFO","msg":"sender: started","stream_id":"7xoreo3c"}
+{"time":"2026-05-04T13:03:45.604511+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"7xoreo3c"}}
+{"time":"2026-05-04T13:03:46.255304+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T13:03:46.899707+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T13:03:46.90051+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T13:03:47.362481+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.168814125,"progress":"279B/279B"},{"desc":"saving job artifact","runtime_seconds":0.164446}],"total_operations":2}}
+{"time":"2026-05-04T13:03:47.936767+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T13:03:49.314012+02:00","level":"INFO","msg":"stream: closing","id":"7xoreo3c"}
+{"time":"2026-05-04T13:03:49.314058+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"7xoreo3c"}}
+{"time":"2026-05-04T13:03:49.314095+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"7xoreo3c"}}
+{"time":"2026-05-04T13:03:49.314102+02:00","level":"INFO","msg":"sender: closed","stream_id":"7xoreo3c"}
+{"time":"2026-05-04T13:03:49.31434+02:00","level":"INFO","msg":"stream: closed","id":"7xoreo3c"}

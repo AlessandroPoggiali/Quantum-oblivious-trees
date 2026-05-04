@@ -1,0 +1,17 @@
+{"time":"2026-05-04T12:59:23.963955+02:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2026-05-04T12:59:23.963994+02:00","level":"INFO","msg":"created symlink","path":"/Users/alessandro/Documents/università/Projects/quantum/Quantum Oblivious Trees/wandb/run-20260504_125923-iclp00ly/logs/debug-core.log"}
+{"time":"2026-05-04T12:59:24.072758+02:00","level":"INFO","msg":"created new stream","id":"iclp00ly"}
+{"time":"2026-05-04T12:59:24.072819+02:00","level":"INFO","msg":"stream: started","id":"iclp00ly"}
+{"time":"2026-05-04T12:59:24.072829+02:00","level":"INFO","msg":"sender: started","stream_id":"iclp00ly"}
+{"time":"2026-05-04T12:59:24.072822+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"iclp00ly"}}
+{"time":"2026-05-04T12:59:24.072846+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"iclp00ly"}}
+{"time":"2026-05-04T12:59:24.531904+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-04T12:59:25.147891+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-04T12:59:25.148479+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-04T12:59:25.624945+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.236266667},{"desc":"uploading config.yaml","runtime_seconds":0.001230917,"progress":"897B/897B"},{"desc":"uploading output.log","runtime_seconds":0.001218875}],"total_operations":3}}
+{"time":"2026-05-04T12:59:26.244486+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-04T12:59:27.604182+02:00","level":"INFO","msg":"stream: closing","id":"iclp00ly"}
+{"time":"2026-05-04T12:59:27.604198+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"iclp00ly"}}
+{"time":"2026-05-04T12:59:27.604212+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"iclp00ly"}}
+{"time":"2026-05-04T12:59:27.604243+02:00","level":"INFO","msg":"sender: closed","stream_id":"iclp00ly"}
+{"time":"2026-05-04T12:59:27.604315+02:00","level":"INFO","msg":"stream: closed","id":"iclp00ly"}
